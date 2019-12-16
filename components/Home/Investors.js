@@ -16,7 +16,8 @@ const Avatar = ({ author }) => {
       >
         <div className="avatar-info">
           <p className="avatar-title align-center">
-            {position} <span className="triangle blue" />
+            <span className="label">{position}</span>
+            <span className="triangle blue" />
           </p>
           <p className="avatar-name">{name}</p>
         </div>
@@ -42,7 +43,11 @@ const Avatar = ({ author }) => {
         .avatar-title {
           font-size: 1.6rem;
           font-weight: 500;
+        }
+
+        .label {
           color: ${colors.lightBlue};
+          flex: 1;
         }
 
         .avatar-name {
@@ -51,7 +56,7 @@ const Avatar = ({ author }) => {
         }
 
         .triangle {
-          margin-left: 20px;
+          margin-left: 15px;
           transition: transform 0.2s;
         }
 
