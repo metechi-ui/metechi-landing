@@ -58,13 +58,37 @@ const Footer = () => {
               className="social-icon icon-linkedin"
             />
           </div>
-          <form className="tag">
+
+          <form
+            className={"tag"}
+            action={
+              "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+            }
+            method="POST"
+          >
+            {/* medium */}
+            <input
+              type="hidden"
+              id="00N1U00000QbeQx"
+              name="00N1U00000QbeQx"
+              value={"newsletter_subscription"}
+            />
+            <input
+              type="hidden"
+              name="retURL"
+              value={`https://metechi-landing.now.sh${router.route}?thankyou=true`}
+            />
+            <input type="hidden" name="oid" value={`00D1U000000xECz`} />
+            <input type="hidden" name="oid" value={`http://www.google.com`} />
+
             <input
               type="hidden"
               name="retURL"
               value={`https://metechi-landing.now.sh${router.route}?thankyou=true`}
             />
             <input
+              id="email"
+              name="email"
               type="email"
               required
               placeholder="Subscribe to our newsletter"

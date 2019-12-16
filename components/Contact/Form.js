@@ -30,14 +30,6 @@ const Form = ({ className }) => {
             value={queries.utm_source}
           />
         )}
-        {queries.utm_medium && (
-          <input
-            type="hidden"
-            id="00N1U00000QbeQx"
-            name="00N1U00000QbeQx"
-            value={queries.utm_medium}
-          />
-        )}
         {queries.utm_campaign && (
           <input
             type="hidden"
@@ -46,6 +38,13 @@ const Form = ({ className }) => {
             value={queries.utm_medium}
           />
         )}
+        {/* medium */}
+        <input
+          type="hidden"
+          id="00N1U00000QbeQx"
+          name="00N1U00000QbeQx"
+          value={"contact_us"}
+        />
         <input
           type="hidden"
           name="retURL"
