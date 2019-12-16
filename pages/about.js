@@ -13,6 +13,7 @@ import Market from "../components/About/Market";
 import Team from "../components/About/Team";
 
 const AboutUs = ({ data }) => {
+  if (!date) return null;
   return (
     <div>
       <Head>
