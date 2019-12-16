@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import nl2br from "react-nl2br";
-import axios from "axios";
+import fetch from "isomorphic-fetch";
 
 import { breakpoints } from "../styles/theme";
 import Nav from "../components/Nav";
@@ -131,7 +131,7 @@ const Home = ({ data = {} }) => {
 };
 
 Home.getInitialProps = async () => {
-  const res = await fetch("/json/home.json");
+  const res = await fetch("https://metechi-landing.now.sh/json/home.json");
   const data = await res.json();
 
   console.log(`Show home data fetched. Count: ${data.length}`);
