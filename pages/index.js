@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import nl2br from "react-nl2br";
-import fetch from "isomorphic-fetch";
+import axios from "axios";
 
 import { breakpoints } from "../styles/theme";
 import Nav from "../components/Nav";
@@ -19,7 +19,7 @@ const HeroWithNoSSR = dynamic(() => import("../components/Home/Hero"), {
   ssr: false
 });
 
-const HeroBtn = ({ label }) => {
+const HeroBtn = () => {
   const [, dispatch] = useContext(ModalContext);
   return (
     <Button
@@ -112,6 +112,19 @@ const Home = ({ data = {} }) => {
           padding: 30px 0 60px;
         }
 
+        @media (${breakpoints.downTy}) {
+          h1 {
+            font-size: 3.8rem;
+            margin-top: 50px;
+          }
+          p {
+            font-size: 1.9rem;
+          }
+
+          .hero-wrapper {
+            margin-top: -230px;
+          }
+        }
         @media (${breakpoints.md}) {
           h1 {
             font-size: 6.2rem;
@@ -131,12 +144,15 @@ const Home = ({ data = {} }) => {
 };
 
 Home.getInitialProps = async () => {
-  const res = await fetch("https://metechi-landing.now.sh/json/home.json");
-  const data = await res.json();
-
-  console.log(`Show home data fetched. Count: ${data.length}`);
-
-  return { data };
+  try {
+    const { data } = await axios.get(
+      "https://metechi-landing.now.sh/json/home.json"
+    );
+    return { data };
+  } catch (error) {
+    console.log(error);
+    return { error };
+  }
 };
 
 export default Home;

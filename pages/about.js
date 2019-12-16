@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import fetch from "isomorphic-fetch";
+import axios from "axios";
 import nl2br from "react-nl2br";
 
 import { colors, breakpoints } from "../styles/theme";
@@ -156,12 +156,15 @@ const AboutUs = ({ data }) => {
 };
 
 AboutUs.getInitialProps = async () => {
-  const res = await fetch("https://metechi-landing.now.sh/json/about.json");
-  const data = await res.json();
-
-  console.log(`Show about data fetched. Count: ${data.length}`);
-
-  return { data };
+  try {
+    const { data } = await axios.get(
+      "https://metechi-landing.now.sh/json/about.json"
+    );
+    return { data };
+  } catch (error) {
+    console.log(error);
+    return { error };
+  }
 };
 
 export default AboutUs;

@@ -21,10 +21,12 @@ const colors = {
 };
 
 const breakpoints = {
+  ty: "min-width: 385px",
   sm: "min-width: 576px",
   md: "min-width: 820px",
   lg: "min-width: 992px",
   xl: "min-width: 1200px",
+  downTy: "max-width: 385px",
   downSm: "max-width: 576px",
   downMd: "max-width: 768px",
   downLg: "max-width: 992px",
