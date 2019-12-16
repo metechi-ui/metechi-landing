@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="190px" viewBox="0 0 200 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-8" transform="translate(1.000000, 2.000000)" stroke="#AFB7C4">
+            <g id="Group-6-Copy" transform="translate(55.788234, 0.000000)">
+                <polygon id="Rectangle-Copy-57" fill="#FFFFFF" stroke-linejoin="round" transform="translate(84.107751, 40.755463) rotate(45.000000) translate(-84.107751, -40.755463) " points="75.6906363 32.3383483 112.787487 12.0757263 92.5248652 49.1725772 55.4280143 69.4351992"></polygon>
+                <polygon id="Rectangle-Copy-59" fill="#FFFFFF" stroke-linejoin="round" transform="translate(104.387387, 89.796679) rotate(45.000000) translate(-104.387387, -89.796679) " points="144.987517 101.717073 84.0498786 40.7794342 63.7872565 77.8762851 124.724895 138.813924"></polygon>
+                <polygon id="Rectangle-Copy-58" fill="#FFFFFF" stroke-linejoin="round" transform="translate(63.828115, 89.796679) rotate(45.000000) translate(-63.828115, -89.796679) " points="75.7485084 130.396809 112.845359 110.134187 51.9077207 49.1965486 14.8108698 69.4591707"></polygon>
+                <g id="Group-7" transform="translate(69.175326, 34.731572)">
+                    <ellipse id="Oval" fill="#FFFFFF" cx="14.3304028" cy="5.70192456" rx="14.3123495" ry="5.43672133"></ellipse>
+                    <g id="Group-30" transform="translate(5.446875, 3.230688)" stroke-linecap="round">
+                        <path d="M6.9468754,4.71916208 L2.78991389,3.04885107 C2.33843873,2.86744359 2.11950563,2.35439085 2.30091311,1.90291569 C2.40541739,1.64283222 2.62744632,1.44799781 2.89890259,1.37816909 C4.59033527,0.94306921 6.37572825,1.05047091 8.00280464,1.68519828 L10.5819211,2.69131931 C11.9943415,3.24230875 13.54343,3.33912721 15.0134647,2.96829201 C15.4343043,2.86212981 15.6894008,2.43491044 15.5832386,2.01407084 C15.5231997,1.77606978 15.3554055,1.57979023 15.1296384,1.48346591 L11.6526574,0 L11.6526574,0" id="Path-14" stroke-linejoin="round"></path>
+                        <line x1="15.3822167" y1="0.932240318" x2="1.71524199" y2="3.86408496" id="Path-15" fill="#FFFFFF"></line>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-6-Copy-2" transform="translate(33.650046, 65.529036)">
+                <polygon id="Rectangle-Copy-57" fill="#FFFFFF" stroke-linejoin="round" transform="translate(57.543165, 37.844358) rotate(45.000000) translate(-57.543165, -37.844358) " points="49.7272735 30.0284663 84.1743494 11.2131744 65.3590575 45.6602502 30.9119816 64.4755421"></polygon>
+                <polygon id="Rectangle-Copy-59" fill="#FFFFFF" stroke-linejoin="round" transform="translate(76.374256, 62.825742) rotate(45.000000) translate(-76.374256, -62.825742) " points="99.5384618 59.3587634 72.0253425 31.8456441 53.2100506 66.29272 80.7231699 93.8058393"></polygon>
+                <polygon id="Rectangle-Copy-58" fill="#FFFFFF" stroke-linejoin="round" transform="translate(38.712075, 62.825742) rotate(45.000000) translate(-38.712075, -62.825742) " points="35.2450965 85.9899473 69.6921723 67.1746554 42.1790531 39.6615361 7.73197721 58.476828"></polygon>
+                <g id="Group-7" transform="translate(43.677342, 32.250746)">
+                    <ellipse id="Oval" fill="#FFFFFF" cx="13.3068026" cy="5.29464423" rx="13.2900388" ry="5.04838409"></ellipse>
+                    <g id="Group-30" transform="translate(5.057813, 2.999924)" stroke-linecap="round">
+                        <path d="M6.45067002,4.38207907 L2.59063432,2.831076 C2.1714074,2.66262619 1.96811237,2.18622007 2.13656217,1.76699315 C2.23360186,1.52548707 2.43977159,1.3445694 2.69183812,1.27972844 C4.26245418,0.875707124 5.92031909,0.975437275 7.43117573,1.56482697 L9.82606955,2.49908222 C11.1376028,3.01071527 12.5760422,3.10061812 13.9410744,2.75627116 C14.331854,2.65769196 14.5687293,2.26098826 14.4701501,1.87020864 C14.4143997,1.64920765 14.2585908,1.46694807 14.0489499,1.37750406 L10.8203248,0 L10.8203248,0" id="Path-14" stroke-linejoin="round"></path>
+                        <line x1="14.2834869" y1="0.865651724" x2="1.59272471" y2="3.58807889" id="Path-15" fill="#FFFFFF"></line>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-6-Copy-3" transform="translate(0.000000, 107.148829)">
+                <polygon id="Rectangle-Copy-57" fill="#FFFFFF" stroke-linejoin="round" transform="translate(44.261493, 34.933254) rotate(45.000000) translate(-44.261493, -34.933254) " points="37.0468235 27.7185843 68.8441243 10.3506225 51.4761625 42.1479233 19.6788617 59.5158851"></polygon>
+                <polygon id="Rectangle-Copy-59" fill="#FFFFFF" stroke-linejoin="round" transform="translate(61.644038, 48.694953) rotate(45.000000) translate(-61.644038, -48.694953) " points="76.4516755 38.9199594 64.2043627 26.6726467 46.836401 58.4699474 59.0837138 70.7172602"></polygon>
+                <polygon id="Rectangle-Copy-58" fill="#FFFFFF" stroke-linejoin="round" transform="translate(26.878948, 48.694953) rotate(45.000000) translate(-26.878948, -48.694953) " points="17.1039537 63.5025907 48.9012545 46.1346289 36.6539417 33.8873162 4.85664094 51.2552779"></polygon>
+                <g id="Group-7" transform="translate(31.462272, 29.769919)">
+                    <ellipse id="Oval" fill="#FFFFFF" cx="12.2832024" cy="4.88736391" rx="12.2677282" ry="4.66004685"></ellipse>
+                    <g id="Group-30" transform="translate(4.668750, 2.769161)" stroke-linecap="round">
+                        <path d="M5.95446463,4.04499606 L2.39135476,2.61330092 C2.00437606,2.45780879 1.81671911,2.0180493 1.97221124,1.6310706 C2.06178634,1.40814191 2.25209685,1.24114098 2.48477365,1.18128779 C3.93457309,0.808345037 5.46490993,0.900403639 6.85954683,1.44445567 L9.07021805,2.30684512 C10.2808641,2.77912179 11.6086543,2.86210904 12.8686841,2.5442503 C13.2294037,2.45325412 13.4480578,2.08706609 13.3570616,1.72634644 C13.3055998,1.52234553 13.1617762,1.35410591 12.9682615,1.27154221 L9.98799209,0 L9.98799209,0" id="Path-14" stroke-linejoin="round"></path>
+                        <line x1="13.1847571" y1="0.79906313" x2="1.47020742" y2="3.31207282" id="Path-15" fill="#FFFFFF"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

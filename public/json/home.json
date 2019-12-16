@@ -1,0 +1,75 @@
+{
+  "title": "It’s No Longer About Who You Know",
+  "subTitle": "Join our Marketplace - Buy CRE Loans Directly from Banks",
+  "heroCta": "Get Access",
+  "locations": {
+    "title": "What is Metechi?",
+    "text": "Metechi is a Bank-centered Syndication Marketplace providing banks with instant access to a broad universe of pre-screened lenders to fund or sell their Commercial Real Estate loans."
+  },
+  "tiles": [
+    {
+      "label": "Min Deal size",
+      "text": "$30M"
+    },
+    {
+      "label": "Min AUM",
+      "text": "$200M"
+    },
+    {
+      "label": "Min Ticket",
+      "text": "$5M"
+    },
+    {
+      "label": "",
+      "text": "Qualified\nPurchasers Only"
+    },
+    {
+      "label": "",
+      "text": "Pre-Screened\nVetted Participants"
+    }
+  ],
+  "banks": {
+    "title": "Agent Banks",
+    "text1": "Compete with big banks, better serve your clients, and easily observe regulatory constraints.",
+    "text2": "Get premier access to our qualified institutional- investor-base to syndicate CRE loans.",
+    "author": {
+      "position": "Talk directly to our Head of BD ",
+      "name": "Charles Greenwald"
+    }
+  },
+  "participants": {
+    "title": "Institutional Investors",
+    "text": "Build a portfolio that excites by going beyond your reach. Choose your favorite deals and let the banks do the heavy lifting for you",
+    "title2": "Participating Banks",
+    "text2": "CRE syndication opportunities originated by banks. Connect directly to senior debt opportunities",
+    "author": {
+      "position": "Talk directly to our Head of IR",
+      "name": "Stephanie Rieben"
+    }
+  },
+  "product": {
+    "title": "Product",
+    "items": [      
+      {
+        "label": "Match",
+        "text": " your deal with the right investors"
+      },
+      {
+        "label": "Share",
+        "text": "your deal via a secure data room"
+      },
+      {
+        "label": "Collaborate",
+        "text": "with your team and sponsors"
+      },
+      {
+        "label": "Communicate",
+        "text": "directly with participants and other deal parties"
+      },
+      {
+        "label": "Close and monitor",
+        "text": "get constant reports and accounting "
+      }
+    ]
+  }
+}

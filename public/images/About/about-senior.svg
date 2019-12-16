@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="210px" height="140px" viewBox="0 0 210 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Artboard Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-6" transform="translate(0.000000, -37.000000)" stroke="#AFB7C4">
+            <polygon id="Rectangle-Copy-62" fill="#FFFFFF" stroke-linejoin="round" transform="translate(105.000000, 132.391304) rotate(45.000000) translate(-105.000000, -132.391304) " points="86.5477272 113.939032 168 69.3913043 123.452273 150.843577 42 195.391304"></polygon>
+            <polygon id="Rectangle-Copy-61" fill="#FFFFFF" stroke-linejoin="round" transform="translate(105.000000, 120.521739) rotate(45.000000) translate(-105.000000, -120.521739) " points="84.9431818 100.464921 173.478261 52.0434783 125.056818 140.578557 36.5217391 189"></polygon>
+            <polygon id="Rectangle-Copy-55" fill="#FFFFFF" stroke-linejoin="round" transform="translate(105.000000, 107.739130) rotate(45.000000) translate(-105.000000, -107.739130) " points="83.3386363 86.0777667 178.956522 33.7826087 126.661364 129.400494 31.0434783 181.695652"></polygon>
+            <polygon id="Rectangle-Copy-56" fill="#FFFFFF" stroke-linejoin="round" transform="translate(105.000000, 98.608696) rotate(45.000000) translate(-105.000000, -98.608696) " points="84.9431818 78.5518774 173.478261 30.1304348 125.056818 118.665514 36.5217391 167.086957"></polygon>
+            <polygon id="Rectangle-Copy-57" fill="#FFFFFF" stroke-linejoin="round" transform="translate(105.000000, 89.478261) rotate(45.000000) translate(-105.000000, -89.478261) " points="86.5477272 71.0259881 168 26.4782609 123.452273 107.930534 42 152.478261"></polygon>
+            <g id="Group-7" transform="translate(80.053557, 79.140514)">
+                <ellipse id="Oval" fill="#FFFFFF" cx="23.2608695" cy="8.72282609" rx="23.2608695" ry="8.72282609"></ellipse>
+                <g id="Group-30" transform="translate(9.140060, 4.288028)" stroke-linecap="round">
+                    <path d="M11.2257592,7.77346229 L4.50231708,5.01963691 C3.75987683,4.71554404 3.40452608,3.86716133 3.70861894,3.12472109 C3.88160101,2.7023868 4.24300076,2.38589532 4.68446322,2.27013721 C7.4151712,1.55410445 10.3033426,1.7305575 12.9265743,2.77368962 L17.1047194,4.43513549 C19.3818085,5.34062347 21.8876035,5.4996902 24.260913,4.88940742 C24.953961,4.71119412 25.3713171,4.00489722 25.1931038,3.31184914 C25.0936266,2.9249955 24.8212812,2.60564722 24.4549847,2.44634148 L18.8300377,0 L18.8300377,0" id="Path-14" stroke-linejoin="round"></path>
+                    <line x1="24.8567953" y1="1.53559781" x2="2.7717344" y2="6.36496866" id="Path-15" fill="#FFFFFF"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

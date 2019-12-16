@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="190px" viewBox="0 0 200 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4-Copy" transform="translate(96.000000, 93.500000) scale(-1, 1) translate(-96.000000, -93.500000) translate(11.000000, 10.000000)" stroke="#AFB7C4">
+            <g id="Group-3" transform="translate(0.123964, 0.315271)">
+                <polygon id="Rectangle-Copy" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(79.023526, 86.661270) rotate(45.000000) translate(-79.023526, -86.661270) " points="17.9203108 73.6984348 30.1038668 58.4014182 70.3418047 36.2074896 140.126742 105.838322 83.4215466 137.11505 26.4120032 80.2313998"></polygon>
+                <polyline id="Path-15" stroke-linecap="round" stroke-linejoin="round" transform="translate(60.376036, 110.184729) scale(-1, 1) translate(-60.376036, -110.184729) " points="63.8760355 105.684729 59.1310892 114.684729 56.8760355 111.836379"></polyline>
+                <ellipse id="Mask" fill="#FFFFFF" transform="translate(93.876036, 62.184729) rotate(-10.000000) translate(-93.876036, -62.184729) " cx="93.8760355" cy="62.1847291" rx="7" ry="10.5"></ellipse>
+                <polygon id="Rectangle-Copy-2" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(113.984277, 92.569902) scale(-1, 1) rotate(45.000000) translate(-113.984277, -92.569902) " points="74.4827417 60.1472374 83.7008753 55.3617342 153.485812 124.992566 144.267679 129.77807"></polygon>
+                <line x1="68.5477234" y1="74.6847291" x2="101.584122" y2="84.1055427" id="Path-Copy-23" fill="#FFFFFF"></line>
+                <line x1="76.0114985" y1="89.813134" x2="101.584122" y2="97.1055427" id="Path-Copy-29" fill="#FFFFFF"></line>
+                <line x1="55.8396366" y1="116.684729" x2="78.539215" y2="123.157847" id="Path-Copy-28" fill="#FFFFFF"></line>
+                <line x1="68.9586632" y1="115.44495" x2="78.539215" y2="118.176985" id="Path-Copy-30" fill="#FFFFFF"></line>
+                <line x1="83.3226503" y1="85.1607227" x2="101.876036" y2="90.4514926" id="Path-Copy-27" fill="#FFFFFF"></line>
+                <polyline id="Rectangle-Copy" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(81.710270, 37.724042) rotate(45.000000) translate(-81.710270, -37.724042) " points="52.529886 53.2825685 62.2800506 41.1313742 110.890654 14.183217 105.620444 23.6772756 65.5067586 45.9150146 53.3110854 61.2648674"></polyline>
+                <polyline id="Rectangle-Copy-10" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(81.636049, 36.358185) rotate(45.000000) translate(-81.636049, -36.358185) " points="54.181061 54.951356 63.9312256 42.8001616 109.091036 17.7650131"></polyline>
+                <polyline id="Rectangle-Copy-15" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(80.166166, 37.709600) rotate(45.000000) translate(-80.166166, -37.709600) " points="53.945023 55.6187672 63.6951876 43.4675728 106.387308 19.8004323"></polyline>
+                <line x1="64.414836" y1="32.0871141" x2="46.3482176" y2="44.7959187" id="Path-Copy-26" fill="#FFFFFF"></line>
+            </g>
+        </g>
+    </g>
+</svg>

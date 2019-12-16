@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="210px" height="140px" viewBox="0 0 210 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Artboard Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-6-Copy-3" transform="translate(12.000000, -17.000000)">
+            <polygon id="Rectangle-Copy-60" stroke="#AFB7C4" fill="#FFFFFF" stroke-linejoin="round" transform="translate(90.000000, 109.000000) rotate(45.000000) translate(-90.000000, -109.000000) " points="71.5477272 90.5477272 153 46 108.452273 127.452273 27 172"></polygon>
+            <g id="Group-11" transform="translate(100.262309, 67.000000) rotate(-10.000000) translate(-100.262309, -67.000000) translate(42.762309, 10.000000)" fill="#FFFFFF" stroke="#AFB7C4">
+                <polygon id="Rectangle-Copy-57" stroke-linejoin="round" transform="translate(57.550716, 57.000000) rotate(45.000000) translate(-57.550716, -57.000000) " points="57.2809724 10 90.8637403 43.5827679 57.8204588 104 24.2376909 70.4172321"></polygon>
+                <polygon id="Rectangle-Copy-63" stroke-linejoin="round" transform="translate(57.550716, 46.000000) rotate(45.000000) translate(-57.550716, -46.000000) " points="71.423108 13.1421356 76.7216046 18.4406323 43.6783232 78.8578644 38.3798265 73.5593677"></polygon>
+                <line x1="59.2881014" y1="42.2638635" x2="40.1009899" y2="77.3460987" id="Rectangle-Copy-64" stroke-linejoin="round" transform="translate(49.694546, 59.804981) rotate(45.000000) translate(-49.694546, -59.804981) "></line>
+                <line x1="50.3840899" y1="55.4292587" x2="37.132986" y2="79.6579364" id="Rectangle-Copy-65" stroke-linejoin="round" transform="translate(43.758538, 67.543598) rotate(45.000000) translate(-43.758538, -67.543598) "></line>
+                <path d="M84.4495589,62.8395231 L83.4463527,65.8318096 C83.1904024,66.5952386 82.3640322,67.0066314 81.6006032,66.7506811 C81.3771574,66.6757677 81.1752024,66.5478034 81.0120395,66.3777508 C80.0450374,65.3699156 79.9341304,63.815846 80.7482122,62.6809029 L80.7554934,62.6707518 C81.5737955,61.529925 81.4623136,59.9677988 80.4902983,58.9547388 L80.44692,58.9095287 C79.8713767,58.3096823 78.9185351,58.2899807 78.3186886,58.865524 C78.1435137,59.0336017 78.0115921,59.2415564 77.9341764,59.4716503 L76.9526807,62.3888395 L76.9526807,62.3888395" id="Rectangle-Copy-66" stroke-linecap="round" stroke-linejoin="round" transform="translate(80.701120, 62.616528) rotate(45.000000) translate(-80.701120, -62.616528) "></path>
+                <line x1="80.7466808" y1="56.9161151" x2="80.6903716" y2="68.6764582" id="Path-15" stroke-linecap="round"></line>
+            </g>
+            <g id="Group-10" transform="translate(116.952681, 72.916115)"></g>
+        </g>
+    </g>
+</svg>
