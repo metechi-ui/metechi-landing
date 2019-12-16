@@ -62,7 +62,7 @@ const Footer = () => {
             <input
               type="hidden"
               name="retURL"
-              value={`https://metechi.com${router.route}?thankyou=true`}
+              value={`https://metechi-landing.now.sh${router.route}?thankyou=true`}
             />
             <input
               type="email"
