@@ -33,7 +33,6 @@ const HeroBtn = ({ label }) => {
 };
 
 const Home = ({ data = {} }) => {
-  if (!date) return null;
   return (
     <div>
       <Head>
