@@ -16,7 +16,7 @@ const AboutUs = ({ data }) => {
     <div>
       <Head>
         <title>Metechi - About Us</title>
-        <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
+        <meta https-equiv="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Head>
 
       <Nav light />

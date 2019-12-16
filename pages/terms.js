@@ -10,6 +10,7 @@ const Terms = () => {
     <>
       <Head>
         <title>Metechi - Terms Of Use</title>
+        <meta https-equiv="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Head>
       <Nav />
 
