@@ -102,6 +102,12 @@ const Form = () => {
           }
         }
 
+        @media (${breakpoints.downTy}) {
+          section {
+            padding-bottom: 150px;
+          }
+        }
+
         @media (${breakpoints.md}) {
           h2 {
             font-size: 5.2rem;

@@ -36,7 +36,7 @@ const Modal = () => {
         }
       </Transition>
 
-      <style jsx global>{`
+      <style jsx>{`
         .modal {
           position: fixed;
           top: 0;
@@ -115,6 +115,11 @@ const Modal = () => {
           margin-bottom: 6vh;
         }
 
+        @media (${breakpoints.downTy}) {
+          .modal .access-form {
+            padding-bottom: 30vh;
+          }
+        }
         @media (${breakpoints.sm}) {
           .modal .access-form {
             padding-top: 12vh;
