@@ -21,7 +21,7 @@ const ThankYou = () => {
   return (
     <>
       <Head>
-        <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       </Head>
       <div className="thank-you flex justify-center">
         <div className="full-abs" onClick={() => set(false)} />
