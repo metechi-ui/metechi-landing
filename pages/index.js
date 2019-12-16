@@ -6,7 +6,6 @@ import axios from "axios";
 
 import { breakpoints } from "../styles/theme";
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 import AccessForm from "../components/AccessForm";
 import Button from "../components/Button";
 import Cards from "../components/Home/Cards";
@@ -15,6 +14,7 @@ import Banks from "../components/Home/Banks";
 import Investors from "../components/Home/Investors";
 import Product from "../components/Home/Product";
 import { ModalContext } from "../context/ModalContext";
+import json from "../public/json/home.json";
 
 const HeroWithNoSSR = dynamic(() => import("../components/Home/Hero"), {
   ssr: false
@@ -133,7 +133,7 @@ const Home = ({ data = {} }) => {
 
 Home.getInitialProps = async () => {
   try {
-    const { data } = await axios.get("/json/home.json");
+    const { data } = await axios.get(json);
     return { data };
   } catch (error) {
     console.log(error);
