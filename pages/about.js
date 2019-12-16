@@ -156,13 +156,12 @@ const AboutUs = ({ data }) => {
 };
 
 AboutUs.getInitialProps = async () => {
-  try {
-    const { data } = await axios.get("/json/about.json");
-    return { data };
-  } catch (error) {
-    console.log(error);
-    return { error };
-  }
+  const res = await fetch("/json/about.json");
+  const data = await res.json();
+
+  console.log(`Show about data fetched. Count: ${data.length}`);
+
+  return { data };
 };
 
 export default AboutUs;

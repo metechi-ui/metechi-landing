@@ -131,13 +131,12 @@ const Home = ({ data = {} }) => {
 };
 
 Home.getInitialProps = async () => {
-  try {
-    const { data } = await axios.get("/json/home.json");
-    return { data };
-  } catch (error) {
-    console.log(error);
-    return { error };
-  }
+  const res = await fetch("/json/home.json");
+  const data = await res.json();
+
+  console.log(`Show home data fetched. Count: ${data.length}`);
+
+  return { data };
 };
 
 export default Home;
