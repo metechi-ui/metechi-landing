@@ -52,10 +52,9 @@ const Modal = () => {
           width: 100%;
         }        
         .modal article{
-          background-color: #fff;
           position: relative;
           box-shadow: 0 0 30px rgba(0,0,0,.1);
-          background: url(/images/form-bg.jpg) center no-repeat;
+          background: url(/images/form-bg.jpg) center no-repeat #fff;
           background-size: cover;
           width: 100%;
           margin: auto;
