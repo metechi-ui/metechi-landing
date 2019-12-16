@@ -158,7 +158,7 @@ const AboutUs = ({ data }) => {
 
 AboutUs.getInitialProps = async () => {
   try {
-    const { data } = await axios.get("http://localhost:3000/json/about.json");
+    const { data } = await axios.get("/json/about.json");
     return { data };
   } catch (error) {
     console.log(error);
