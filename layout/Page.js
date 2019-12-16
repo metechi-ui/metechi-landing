@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import Head from "next/head";
 
 import resetStyles from "../styles/reset";
 import typographyStyles from "../styles/typography";
@@ -19,76 +18,68 @@ const ThankYou = () => {
   if (!active) return null;
 
   return (
-    <>
-      <Head>
-        <META
-          HTTP-EQUIV="Content-type"
-          CONTENT="text/html; charset=UTF-8"
-        ></META>
-      </Head>
-      <div className="thank-you flex justify-center">
-        <div className="full-abs" onClick={() => set(false)} />
-        <article className="stagger-in">
-          <h2>Thank You!</h2>
-          <p>Our team will contact you shortly</p>
-          <Button primary small onClick={() => set(false)} label="Close" />
-        </article>
+    <div className="thank-you flex justify-center">
+      <div className="full-abs" onClick={() => set(false)} />
+      <article className="stagger-in">
+        <h2>Thank You!</h2>
+        <p>Our team will contact you shortly</p>
+        <Button primary small onClick={() => set(false)} label="Close" />
+      </article>
 
-        <style jsx global>{`
-          .thank-you {
-            text-align: center;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 300;
-            padding: 20px 25px;
-          }
-          .full-abs {
-            background-color: rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-          }
+      <style jsx global>{`
+        .thank-you {
+          text-align: center;
+          align-items: center;
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 300;
+          padding: 20px 25px;
+        }
+        .full-abs {
+          background-color: rgba(0, 0, 0, 0.3);
+          cursor: pointer;
+        }
 
-          article {
-            background-color: #fff;
-            position: relative;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-            padding: 30px 25px;
-            width: 100%;
-            max-width: 520px;
-          }
+        article {
+          background-color: #fff;
+          position: relative;
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+          padding: 30px 25px;
+          width: 100%;
+          max-width: 520px;
+        }
 
+        h2 {
+          font-size: 3.8rem;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-size: 2rem;
+          margin-bottom: 30px;
+        }
+
+        @media (${breakpoints.md}) {
           h2 {
-            font-size: 3.8rem;
-            margin-bottom: 15px;
+            font-size: 4.2rem;
+            margin-bottom: 20px;
           }
 
           p {
-            font-size: 2rem;
-            margin-bottom: 30px;
+            font-size: 1.9rem;
           }
-
-          @media (${breakpoints.md}) {
-            h2 {
-              font-size: 4.2rem;
-              margin-bottom: 20px;
-            }
-
-            p {
-              font-size: 1.9rem;
-            }
-          }
-        `}</style>
-        <style jsx global>{`
-          body {
-            height: ${active ? "100%" : "auto"};
-            overflow-y: ${active ? "hidden" : "auto"};
-          }
-        `}</style>
-      </div>
-    </>
+        }
+      `}</style>
+      <style jsx global>{`
+        body {
+          height: ${active ? "100%" : "auto"};
+          overflow-y: ${active ? "hidden" : "auto"};
+        }
+      `}</style>
+    </div>
   );
 };
 

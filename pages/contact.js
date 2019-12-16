@@ -10,6 +10,7 @@ const Contact = () => {
     <div>
       <Head>
         <title>Metechi - Contact</title>
+        <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Head>
       <Nav />
       <section>

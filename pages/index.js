@@ -36,6 +36,7 @@ const Home = ({ data = {} }) => {
     <div>
       <Head>
         <title>Metechi</title>
+        <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Head>
 
       <Nav />
