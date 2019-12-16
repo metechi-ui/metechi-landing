@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { breakpoints } from "../../styles/theme";
@@ -6,8 +6,12 @@ import Button from "../../components/Button";
 import Field from "../../components/Field";
 
 const Form = ({ className }) => {
+  const [queries, setQueries] = useState({});
   const router = useRouter();
 
+  useEffect(() => {
+    setQueries(router.query);
+  });
   return (
     <>
       <form
