@@ -10,7 +10,6 @@ import Nav from "../components/Nav";
 import AccessForm from "../components/AccessForm";
 import Market from "../components/About/Market";
 import Team from "../components/About/Team";
-import json from "../public/json/about.json";
 
 const AboutUs = ({ data }) => {
   return (
@@ -158,7 +157,7 @@ const AboutUs = ({ data }) => {
 
 AboutUs.getInitialProps = async () => {
   try {
-    const { data } = await axios.get(json);
+    const { data } = await axios.get("/json/about.json");
     return { data };
   } catch (error) {
     console.log(error);

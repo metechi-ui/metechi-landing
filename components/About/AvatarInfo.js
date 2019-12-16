@@ -8,7 +8,7 @@ const AvatarInfo = ({ name, position, info, img, linkedin }) => {
     <>
       <article>
         <div className="avatar">
-          <figure style={{ backgroundImage: `url(${img})` }} />
+          <figure style={{ backgroundImage: `url(/images/about/${img})` }} />
           <div className="justify-space-between align-center">
             <div className="avatar-wrapper">
               <h3>{name}</h3>

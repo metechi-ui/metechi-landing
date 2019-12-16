@@ -14,7 +14,6 @@ import Banks from "../components/Home/Banks";
 import Investors from "../components/Home/Investors";
 import Product from "../components/Home/Product";
 import { ModalContext } from "../context/ModalContext";
-import json from "../public/json/home.json";
 
 const HeroWithNoSSR = dynamic(() => import("../components/Home/Hero"), {
   ssr: false
@@ -133,7 +132,7 @@ const Home = ({ data = {} }) => {
 
 Home.getInitialProps = async () => {
   try {
-    const { data } = await axios.get(json);
+    const { data } = await axios.get("/json/home.json");
     return { data };
   } catch (error) {
     console.log(error);
