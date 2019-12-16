@@ -42,11 +42,21 @@ const Form = () => {
               value={queries.utm_medium}
             />
           )}
+          {queries.utm_campaign && (
+            <input
+              type="hidden"
+              id="Campaign_ID"
+              name="Campaign_ID"
+              value={queries.utm_medium}
+            />
+          )}
           <input
             type="hidden"
             name="retURL"
             value={`https://metechi.com${router.route}?thankyou=true`}
           />
+          <input type="hidden" name="oid" value={`00D1U000000xECz`} />
+          <input type="hidden" name="oid" value={`http://www.google.com`} />
 
           <div className="form-fields">
             <Field

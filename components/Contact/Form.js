@@ -6,17 +6,49 @@ import Button from "../../components/Button";
 import Field from "../../components/Field";
 
 const Form = ({ className }) => {
-  const onSubmit = evt => evt.preventDefault();
   const router = useRouter();
 
   return (
     <>
-      <form className={className} onSubmit={onSubmit}>
+      <form
+        className={className}
+        action={
+          "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+        }
+        method="POST"
+      >
+        {/*add url params as hidden fields*/}
+        {queries.utm_source && (
+          <input
+            type="hidden"
+            id="00N1U00000QbeQn"
+            name="00N1U00000QbeQn"
+            value={queries.utm_source}
+          />
+        )}
+        {queries.utm_medium && (
+          <input
+            type="hidden"
+            id="00N1U00000QbeQx"
+            name="00N1U00000QbeQx"
+            value={queries.utm_medium}
+          />
+        )}
+        {queries.utm_campaign && (
+          <input
+            type="hidden"
+            id="Campaign_ID"
+            name="Campaign_ID"
+            value={queries.utm_medium}
+          />
+        )}
         <input
           type="hidden"
           name="retURL"
           value={`https://metechi.com${router.route}?thankyou=true`}
         />
+        <input type="hidden" name="oid" value={`00D1U000000xECz`} />
+        <input type="hidden" name="oid" value={`http://www.google.com`} />
 
         <div className="form-fields">
           <Field
@@ -37,7 +69,7 @@ const Form = ({ className }) => {
           <Field label={"Title"} name={"title"} type={"text"} />
           <Field
             label={"Message"}
-            name={"message"}
+            name={"00N1U00000IRyhy"}
             type={"textarea"}
             required
           />
