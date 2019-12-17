@@ -325,7 +325,20 @@ function msieversion() {
 const isMobile = window.innerWidth < 700;
 
 function Hero() {
-  if (msieversion()) return <h1>IE</h1>;
+  if (msieversion())
+    return (
+      <video
+        controls={false}
+        playsInline
+        autoPlay
+        loop
+        muted
+        style={{ width: "100%", minHeight: "100%" }}
+      >
+        <source src="/media/globe.webm" type="video/webm" />
+        <source src="/media/globe.mp4" type="video/mp4" />
+      </video>
+    );
 
   return (
     <Canvas

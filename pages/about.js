@@ -162,7 +162,7 @@ const AboutUs = ({ data }) => {
 
 AboutUs.getInitialProps = async () => {
   try {
-    const { data } = await axios.get("/json/about.json");
+    const { data } = await axios.get("https://about.metechi.com/about.json");
     return { data };
   } catch (error) {
     console.log(error);

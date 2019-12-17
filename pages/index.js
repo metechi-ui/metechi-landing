@@ -150,7 +150,7 @@ const Home = ({ data = {} }) => {
 
 Home.getInitialProps = async () => {
   try {
-    const { data } = await axios.get("/json/home.json");
+    const { data } = await axios.get("https://about.metechi.com/home.json");
     return { data };
   } catch (error) {
     console.log(error);
