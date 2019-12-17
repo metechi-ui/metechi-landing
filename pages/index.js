@@ -38,7 +38,7 @@ const Home = ({ data = {} }) => {
         <title>Metechi</title>
         <meta
           http-equiv="Content-Security-Policy"
-          content="script-src 'self' https://now.sh"
+          content="script-src 'self' https://metechi-landing.now.sh/"
         />
         <meta https-equiv="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Head>
