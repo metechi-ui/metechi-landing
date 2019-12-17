@@ -32,7 +32,7 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
             {/* <Link href="/blog">
               <a className="mobile-link">Blog</a>
             </Link> */}
-            <a className="mobile-link" href="/login">
+            <a className="mobile-link" href="https://app.metechi.com/login">
               Login
             </a>
           </div>
