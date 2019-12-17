@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import nl2br from "react-nl2br";
-import axios from "axios";
+import fetch from "isomorphic-unfetch";
 
 import { breakpoints } from "../styles/theme";
 import Nav from "../components/Nav";
@@ -36,10 +36,6 @@ const Home = ({ data = {} }) => {
     <div>
       <Head>
         <title>Metechi</title>
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="script-src 'self' https://metechi-landing.now.sh/"
-        />
         <meta https-equiv="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Head>
 
@@ -149,13 +145,9 @@ const Home = ({ data = {} }) => {
 };
 
 Home.getInitialProps = async () => {
-  try {
-    const { data } = await axios.get("https://about.metechi.com/home.json");
-    return { data };
-  } catch (error) {
-    console.log(error);
-    return { error };
-  }
+  const res = await fetch("https://about.metechi.com/home.json");
+  const data = await res.json();
+  return { data };
 };
 
 export default Home;

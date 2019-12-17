@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import axios from "axios";
+import fetch from "isomorphic-unfetch";
 import nl2br from "react-nl2br";
 
 import { colors, breakpoints } from "../styles/theme";
@@ -16,10 +16,6 @@ const AboutUs = ({ data }) => {
     <div>
       <Head>
         <title>Metechi - About Us</title>
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="script-src 'self' https://metechi-landing.now.sh/"
-        />
         <meta https-equiv="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Head>
 
@@ -161,13 +157,9 @@ const AboutUs = ({ data }) => {
 };
 
 AboutUs.getInitialProps = async () => {
-  try {
-    const { data } = await axios.get("https://about.metechi.com/about.json");
-    return { data };
-  } catch (error) {
-    console.log(error);
-    return { error };
-  }
+  const res = await fetch("https://about.metechi.com/about.json");
+  const data = await res.json();
+  return { data };
 };
 
 export default AboutUs;
