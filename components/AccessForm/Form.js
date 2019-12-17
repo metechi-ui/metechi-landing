@@ -53,7 +53,7 @@ const Form = () => {
           <input
             type="hidden"
             name="retURL"
-            value={`https://metechi-landing.now.sh${router.route}?thankyou=true`}
+            value={`https://metechi.com${router.route}?thankyou=true`}
           />
           <input type="hidden" name="oid" value={`00D1U000000xECz`} />
           <input type="hidden" name="oid" value={`http://www.google.com`} />
