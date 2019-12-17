@@ -1,8 +1,8 @@
 {
-  "title": "Re-envision\nParticipation\nFinancing",
+  "title": "Re-Envision\nParticipation\nFinancing",
   "market": {
     "title": "The Market",
-    "text": "The CRE syndication market is dominated by personal relationships\nand governed by big banks and brokers. Metechi aims to introduce\nthe AI based digital world to this booming financial market",
+    "text": "The CRE syndication market is dominated by personal relationships\nand governed by big banks and brokers. Metechi aims to introduce\nthe AI based digital world to this booming financial market.",
     "tiles": [
       {
         "icon": "About/about-banks.svg",
@@ -11,12 +11,12 @@
       },
       {
         "icon": "About/about-senior.svg",
-        "label": "Total CRE Senior debt portfolio",
+        "label": "Total CRE Senior Debt Portfolio",
         "text": "$2T"
       },
       {
         "icon": "About/about-total.svg",
-        "label": "Total C&I portfolio",
+        "label": "Total C&I Portfolio",
         "text": "$500B"
       }
     ]

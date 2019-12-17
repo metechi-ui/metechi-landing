@@ -113,10 +113,10 @@ const Footer = () => {
           </div>
           <div className="terms">
             <Link href="/terms">
-              <a className="sub-link">Terms of use</a>
+              <a className="sub-link">Terms of Use</a>
             </Link>
             <Link href="/terms#privacy">
-              <a className="sub-link">Privacy policy</a>
+              <a className="sub-link">Privacy Policy</a>
             </Link>
           </div>
         </div>
