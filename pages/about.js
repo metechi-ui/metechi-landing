@@ -157,7 +157,7 @@ const AboutUs = ({ data }) => {
 };
 
 AboutUs.getInitialProps = async () => {
-  const res = await fetch("json/about.json", {
+  const res = await fetch("https://about.metechi.com/about.json", {
     credentials: "include"
   });
   const data = await res.json();

@@ -145,7 +145,7 @@ const Home = ({ data = {} }) => {
 };
 
 Home.getInitialProps = async () => {
-  const res = await fetch("json/home.json", {
+  const res = await fetch("https://about.metechi.com/home.json", {
     credentials: "include"
   });
   const data = await res.json();
