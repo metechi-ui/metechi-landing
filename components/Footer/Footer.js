@@ -87,7 +87,7 @@ const Footer = () => {
               value={`https://metechi.com${router.route}?thankyou=true`}
             />
             <input
-              id="newsletter"
+              id="email"
               name="email"
               type="email"
               required
@@ -101,7 +101,7 @@ const Footer = () => {
         <div className="justify-space-between-md">
           <div>
             <div className="sub-link">
-              Copyright © 2019 Metechi Inc, All right reserved
+              Copyright © 2019 Metechi Inc, All rights reserved
             </div>
             <a
               className="sub-link"

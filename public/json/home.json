@@ -49,7 +49,7 @@
   },
   "product": {
     "title": "Product",
-    "items": [      
+    "items": [
       {
         "label": "Match",
         "text": " your deal with the right investors"
@@ -67,7 +67,7 @@
         "text": "directly with participants and other deal parties"
       },
       {
-        "label": "Close and monitor",
+        "label": "Close and Monitor",
         "text": "get constant reports and accounting "
       }
     ]
