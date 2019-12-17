@@ -135,7 +135,7 @@ const Nav = ({ light }) => {
     <>
       <nav className="main-menu max-container wide no-padding">
         <Menu light={light} />
-        <a className="hide-sm" href="https://app-staging.metechi.com/login">
+        <a className="hide-sm" href="https://app.metechi.com/login">
           <Button small secondary label="Login" />
         </a>
         <div className="hide-md">

@@ -18,7 +18,7 @@ const Footer = () => {
             <Link href="/contact">
               <a className="link">Contact Us</a>
             </Link>
-            <a className="link" href="https://app-staging.metechi.com/login">
+            <a className="link" href="https://app.metechi.com/login">
               Login
             </a>
           </div>
