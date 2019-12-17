@@ -31,7 +31,7 @@ const Menu = ({ light, sticky }) => {
   return (
     <>
       <div className={classnames("menu align-center", { sticky })}>
-        <Link prefetch href="/">
+        <Link href="/">
           <a>
             <img
               src={
@@ -43,10 +43,10 @@ const Menu = ({ light, sticky }) => {
           </a>
         </Link>
         <div className="hide-sm">
-          {/* <Link prefetch href="/explore">
+          {/* <Link href="/explore">
           <a className="link">Explore</a>
         </Link> */}
-          <Link prefetch href="/about">
+          <Link href="/about">
             <a
               className={classnames("link", {
                 active: router.route === "/about"
@@ -55,7 +55,7 @@ const Menu = ({ light, sticky }) => {
               About Metechi
             </a>
           </Link>
-          <Link prefetch href="/contact">
+          <Link href="/contact">
             <a
               className={classnames("link", {
                 active: router.route === "/contact"
@@ -64,7 +64,7 @@ const Menu = ({ light, sticky }) => {
               Contact Us
             </a>
           </Link>
-          {/* <Link prefetch href="/blog">
+          {/* <Link href="/blog">
           <a className="link">Blog</a>
         </Link> */}
         </div>
