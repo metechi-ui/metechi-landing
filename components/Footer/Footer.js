@@ -88,7 +88,7 @@ const Footer = () => {
             />
             <input
               id="newsletter"
-              name="newsletter"
+              name="email"
               type="email"
               required
               placeholder="Subscribe to our newsletter"
