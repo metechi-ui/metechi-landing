@@ -31,7 +31,7 @@ const Menu = ({ light, sticky }) => {
   return (
     <>
       <div className={classnames("menu align-center", { sticky })}>
-        <Link href="/">
+        <Link prefetch={false} href="/">
           <a>
             <img
               src={
@@ -43,7 +43,7 @@ const Menu = ({ light, sticky }) => {
           </a>
         </Link>
         <div className="hide-sm">
-          {/* <Link href="/explore">
+          {/* <Link prefetch={false} href="/explore">
           <a className="link">Explore</a>
         </Link> */}
           <Link prefetch={false} href="/about">
@@ -64,7 +64,7 @@ const Menu = ({ light, sticky }) => {
               Contact Us
             </a>
           </Link>
-          {/* <Link href="/blog">
+          {/* <Link prefetch={false} href="/blog">
           <a className="link">Blog</a>
         </Link> */}
         </div>
