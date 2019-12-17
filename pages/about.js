@@ -18,7 +18,7 @@ const AboutUs = ({ data }) => {
         <title>Metechi - About Us</title>
         <meta
           http-equiv="Content-Security-Policy"
-          content="default-src 'none'; form-action 'none'; frame-ancestors 'none'; style-src 'self'; script-src 'self' now.sh; img-src 'self'"
+          content="script-src 'self' https://now.sh"
         />
         <meta https-equiv="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Head>
