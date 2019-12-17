@@ -12,10 +12,10 @@ const Footer = () => {
       <div className="max-container content">
         <div className="row">
           <div className="column">
-            <Link href="/about">
+            <Link prefetch href="/about">
               <a className="link">About Metechi</a>
             </Link>
-            <Link href="/contact">
+            <Link prefetch href="/contact">
               <a className="link">Contact Us</a>
             </Link>
             <a className="link" href="/login">
@@ -33,7 +33,7 @@ const Footer = () => {
             <a className="link">Join Us</a>
           </div> */}
           <div className="logo-container">
-            <Link href="/">
+            <Link prefetch href="/">
               <a>
                 <img src="/images/logo-white.svg" alt="logo" className="logo" />
               </a>
@@ -112,10 +112,10 @@ const Footer = () => {
             </a>
           </div>
           <div className="terms">
-            <Link href="/terms">
+            <Link prefetch href="/terms">
               <a className="sub-link">Terms of use</a>
             </Link>
-            <Link href="/terms#privacy">
+            <Link prefetch href="/terms#privacy">
               <a className="sub-link">Privacy policy</a>
             </Link>
           </div>

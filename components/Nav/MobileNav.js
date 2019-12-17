@@ -10,7 +10,7 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
     <>
       <section className={classnames("mobile-nav hide-md flex", { active })}>
         <header className="justify-space-between">
-          <Link href="/">
+          <Link prefetch href="/">
             <a>
               <img src={"/images/logo.svg"} alt="logo" className="logo" />
             </a>
@@ -20,16 +20,16 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
 
         <div className="mobile-content">
           <div>
-            {/* <Link href="/explore">
+            {/* <Link prefetch href="/explore">
               <a className="mobile-link">Explore</a>
             </Link> */}
-            <Link href="/about">
+            <Link prefetch href="/about">
               <a className="mobile-link">About Metechi</a>
             </Link>
-            <Link href="/contact">
+            <Link prefetch href="/contact">
               <a className="mobile-link">Contact Us</a>
             </Link>
-            {/* <Link href="/blog">
+            {/* <Link prefetch href="/blog">
               <a className="mobile-link">Blog</a>
             </Link> */}
             <a className="mobile-link" href="/login">
