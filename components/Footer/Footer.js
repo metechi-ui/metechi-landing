@@ -87,7 +87,7 @@ const Footer = () => {
               value={`https://metechi.com${router.route}?thankyou=true`}
             />
             <input
-              id="email"
+              id="newsletter"
               name="email"
               type="email"
               required
