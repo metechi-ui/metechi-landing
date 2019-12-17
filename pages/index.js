@@ -19,21 +19,6 @@ const HeroWithNoSSR = dynamic(() => import("../components/Home/Hero"), {
   ssr: false
 });
 
-function msieversion() {
-  var ua = window.navigator.userAgent;
-  var msie = ua.indexOf("MSIE ");
-
-  if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
-    // If Internet Explorer, return version number
-    alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
-  } // If another browser, return 0
-  else {
-    alert("otherbrowser");
-  }
-
-  return false;
-}
-
 const HeroBtn = () => {
   const [, dispatch] = useContext(ModalContext);
   return (
@@ -46,9 +31,7 @@ const HeroBtn = () => {
   );
 };
 
-const Home = ({ data = {}, userAgent }) => {
-  console.log(userAgent);
-
+const Home = ({ data = {} }) => {
   return (
     <div>
       <Head>
@@ -165,16 +148,10 @@ const Home = ({ data = {}, userAgent }) => {
   );
 };
 
-Home.getInitialProps = async ({ req }) => {
+Home.getInitialProps = async () => {
   try {
     const { data } = await axios.get("/json/home.json");
-    return {
-      data,
-      userAgent:
-        typeof window === "undefined"
-          ? req.headers["user-agent"]
-          : navigator.userAgent
-    };
+    return { data };
   } catch (error) {
     console.log(error);
     return { error };

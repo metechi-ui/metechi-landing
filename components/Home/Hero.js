@@ -314,9 +314,19 @@ function Building({ geometry, position, rotation, timing, id }) {
   );
 }
 
+function msieversion() {
+  if (!window) return false;
+  const ua = window.navigator.userAgent;
+  const msie = ua.indexOf("MSIE ");
+
+  return msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./);
+}
+
 const isMobile = window.innerWidth < 700;
 
 function Hero() {
+  if (msieversion()) return <h1>IE</h1>;
+
   return (
     <Canvas
       // resize={{scroll: true}, { debounce: { scroll: 50, resize: 50 } }}
