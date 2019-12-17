@@ -16,6 +16,10 @@ const AboutUs = ({ data }) => {
     <div>
       <Head>
         <title>Metechi - About Us</title>
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="connect-src 'self' https://metechi-landing.now.sh/json/"
+        />
         <meta https-equiv="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Head>
 
@@ -159,7 +163,7 @@ const AboutUs = ({ data }) => {
 AboutUs.getInitialProps = async () => {
   try {
     const { data } = await axios.get(
-      "http://home-landing.metechi.com.s3-website.us-east-2.amazonaws.com/about.json"
+      "https://metechi-landing.now.sh/json/about.json"
     );
     return { data };
   } catch (error) {

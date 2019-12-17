@@ -36,6 +36,10 @@ const Home = ({ data = {} }) => {
     <div>
       <Head>
         <title>Metechi</title>
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="connect-src 'self' https://metechi-landing.now.sh/json/"
+        />
         <meta https-equiv="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Head>
 
@@ -147,7 +151,7 @@ const Home = ({ data = {} }) => {
 Home.getInitialProps = async () => {
   try {
     const { data } = await axios.get(
-      "http://home-landing.metechi.com.s3-website.us-east-2.amazonaws.com/home.json"
+      "https://metechi-landing.now.sh/json/home.json"
     );
     return { data };
   } catch (error) {
