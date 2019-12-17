@@ -157,7 +157,9 @@ const AboutUs = ({ data }) => {
 };
 
 AboutUs.getInitialProps = async () => {
-  const res = await fetch("https://about.metechi.com/about.json");
+  const res = await fetch("https://about.metechi.com/about.json", {
+    mode: "no-cors"
+  });
   const data = await res.json();
   return { data };
 };

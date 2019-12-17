@@ -10,10 +10,6 @@ const Contact = () => {
     <div>
       <Head>
         <title>Metechi - Contact</title>
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="script-src 'self' https://metechi-landing.now.sh/"
-        />
         <meta https-equiv="Content-type" CONTENT="text/html; charset=UTF-8" />
       </Head>
       <Nav />
