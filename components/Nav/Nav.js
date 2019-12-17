@@ -46,7 +46,7 @@ const Menu = ({ light, sticky }) => {
           {/* <Link href="/explore">
           <a className="link">Explore</a>
         </Link> */}
-          <Link href="/about">
+          <Link prefetch={false} href="/about">
             <a
               className={classnames("link", {
                 active: router.route === "/about"
@@ -55,7 +55,7 @@ const Menu = ({ light, sticky }) => {
               About Metechi
             </a>
           </Link>
-          <Link href="/contact">
+          <Link prefetch={false} href="/contact">
             <a
               className={classnames("link", {
                 active: router.route === "/contact"
