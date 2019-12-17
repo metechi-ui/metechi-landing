@@ -159,7 +159,7 @@ const AboutUs = ({ data }) => {
 AboutUs.getInitialProps = async () => {
   try {
     const { data } = await axios.get(
-      "https://metechi-landing.now.sh/json/about.json"
+      "http://home-landing.metechi.com.s3-website.us-east-2.amazonaws.com/about.json"
     );
     return { data };
   } catch (error) {

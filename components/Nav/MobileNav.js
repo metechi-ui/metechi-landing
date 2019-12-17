@@ -39,9 +39,21 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
           <footer>
             {CtaBtn}
             <div className="social">
-              <i className="icon-twitter social-icon" />
-              <i className="icon-facebook social-icon" />
-              <i className="icon-linkedin social-icon" />
+              <a
+                target="_blank"
+                href="https://www.twitter.com/metechi"
+                className="social-icon icon-twitter"
+              />
+              <a
+                target="_blank"
+                href="https://www.facebook.com/Metechi-1190578191118346"
+                className="social-icon icon-facebook"
+              />
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/company/metechi"
+                className="social-icon icon-linkedin"
+              />
             </div>
           </footer>
         </div>
@@ -122,6 +134,7 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
           font-size: 1.5rem;
           margin: 0 25px;
           color: ${colors.blueyGrey};
+          text-decoration: none;
         }
       `}</style>
       <style jsx global>{`

@@ -41,7 +41,7 @@ const Contact = () => {
               />
               <a
                 target="_blank"
-                href="https://www.facebook.com/metechi"
+                href="https://www.facebook.com/Metechi-1190578191118346"
                 className="social-icon icon-facebook"
               />
               <a

@@ -147,7 +147,7 @@ const Home = ({ data = {} }) => {
 Home.getInitialProps = async () => {
   try {
     const { data } = await axios.get(
-      "https://metechi-landing.now.sh/json/home.json"
+      "http://home-landing.metechi.com.s3-website.us-east-2.amazonaws.com/home.json"
     );
     return { data };
   } catch (error) {
