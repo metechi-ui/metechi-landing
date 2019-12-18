@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import resetStyles from "../styles/reset";
@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import Button from "../components/Button";
 
 import { breakpoints } from "../styles/theme";
+import { Mixpanel } from "../analytics/Mixpanel";
 
 const ThankYou = () => {
   const [active, set] = useState(true);
@@ -85,6 +86,10 @@ const ThankYou = () => {
 
 const Page = ({ children }) => {
   const router = useRouter();
+
+  useEffect(() => {
+    Mixpanel.track("Page Load", { page: router.route });
+  });
 
   return (
     <div className="page">

@@ -20,7 +20,6 @@ class MyApp extends App {
     Mixpanel.init();
 
     Router.events.on("routeChangeStart", url => {
-      Mixpanel.track("Navigation", { page: url });
       this.setState({
         loading: true
       });
