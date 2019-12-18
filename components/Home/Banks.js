@@ -15,7 +15,7 @@ const Avatar = ({ author }) => {
         className="author align-center"
         onClick={() => {
           dispatch({ type: "show" });
-          Mixpanel.track("banks-author-cta-click");
+          Mixpanel.track("CTA Clicked", { position: "banks-author" });
         }}
       >
         <img src="/images/HP/charles.jpg" alt="charles.jpg" />

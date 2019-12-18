@@ -22,7 +22,7 @@ const CtaBtn = ({ callback }) => {
       onClick={() => {
         dispatch({ type: "show" });
         callback && callback();
-        Mixpanel.track("navbar-cta-click");
+        Mixpanel.track("CTA Clicked", { position: "navbar" });
       }}
     />
   );
@@ -37,7 +37,7 @@ const Menu = ({ light, sticky }) => {
         <Link prefetch={false} href="/">
           <a
             onClick={() => {
-              Mixpanel.track("navbar-logo-click");
+              Mixpanel.track("Navbar Link Clicked", { page: "home" });
             }}
           >
             <img
@@ -59,7 +59,7 @@ const Menu = ({ light, sticky }) => {
                 active: router.route === "/about"
               })}
               onClick={() => {
-                Mixpanel.track("navbar-about-click");
+                Mixpanel.track("Navbar Link Clicked", { page: "about" });
               }}
             >
               About Metechi
@@ -71,7 +71,9 @@ const Menu = ({ light, sticky }) => {
                 active: router.route === "/contact"
               })}
               onClick={() => {
-                Mixpanel.track("navbar-contact-us-click");
+                Mixpanel.track("Navbar Link Clicked", {
+                  position: "contact-us"
+                });
               }}
             >
               Contact Us
@@ -151,7 +153,7 @@ const Nav = ({ light }) => {
         <a
           className="hide-sm"
           onClick={() => {
-            Mixpanel.track("navbar-login-click");
+            Mixpanel.track("Navbar Link Clicked", { page: "login" });
           }}
           href="https://app.metechi.com/login"
         >

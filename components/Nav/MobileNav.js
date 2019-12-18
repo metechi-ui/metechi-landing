@@ -15,7 +15,9 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
           <Link href="/">
             <a
               onClick={() => {
-                Mixpanel.track("mobile-menu-logo-click");
+                Mixpanel.track("Mobile Menu Link Clicked", {
+                  page: "home"
+                });
               }}
             >
               <img src={"/images/logo.svg"} alt="logo" className="logo" />
@@ -33,7 +35,9 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
               <a
                 className="mobile-link"
                 onClick={() => {
-                  Mixpanel.track("mobile-menu-about-click");
+                  Mixpanel.track("Mobile Menu Link Clicked", {
+                    page: "about"
+                  });
                 }}
               >
                 About Metechi
@@ -43,7 +47,9 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
               <a
                 className="mobile-link"
                 onClick={() => {
-                  Mixpanel.track("mobile-menu-contact-us-click");
+                  Mixpanel.track("Mobile Menu Link Clicked", {
+                    page: "contact-us"
+                  });
                 }}
               >
                 Contact Us
@@ -56,7 +62,9 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
               className="mobile-link"
               href="https://app.metechi.com/login"
               onClick={() => {
-                Mixpanel.track("mobile-menu-login-click");
+                Mixpanel.track("Mobile Menu Link Clicked", {
+                  page: "login"
+                });
               }}
             >
               Login
@@ -70,7 +78,9 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
                 href="https://www.twitter.com/metechi"
                 className="social-icon icon-twitter"
                 onClick={() => {
-                  Mixpanel.track("mobile-menu-twitter-click");
+                  Mixpanel.track("Mobile Menu Social Clicked", {
+                    network: "twitter"
+                  });
                 }}
               />
               <a
@@ -78,7 +88,9 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
                 href="https://www.facebook.com/Metechi-1190578191118346"
                 className="social-icon icon-facebook"
                 onClick={() => {
-                  Mixpanel.track("mobile-menu-facebook-click");
+                  Mixpanel.track("Mobile Menu Social Clicked", {
+                    network: "facebook"
+                  });
                 }}
               />
               <a
@@ -86,7 +98,9 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
                 href="https://www.linkedin.com/company/metechi"
                 className="social-icon icon-linkedin"
                 onClick={() => {
-                  Mixpanel.track("mobile-menu-linkedin-click");
+                  Mixpanel.track("Mobile Menu Social Clicked", {
+                    network: "linkedin"
+                  });
                 }}
               />
             </div>

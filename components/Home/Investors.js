@@ -15,7 +15,7 @@ const Avatar = ({ author }) => {
         className="author align-center"
         onClick={() => {
           dispatch({ type: "show" });
-          Mixpanel.track("investors-author-cta-click");
+          Mixpanel.track("CTA Clicked", { position: "investors-investors" });
         }}
       >
         <div className="avatar-info">

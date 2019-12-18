@@ -30,7 +30,7 @@ const HeroBtn = () => {
       label="Get Access"
       onClick={() => {
         dispatch({ type: "show" });
-        Mixpanel.track("hp-hero-cta-click");
+        Mixpanel.track("CTA Clicked", { position: "hp-herp" });
       }}
     />
   );
