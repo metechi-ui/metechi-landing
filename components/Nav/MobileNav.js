@@ -3,6 +3,8 @@ import Link from "next/link";
 import classnames from "classnames";
 
 import { colors } from "../../styles/theme";
+import { Mixpanel } from "../../analytics/Mixpanel";
+
 import Hamburger from "./Hamburger";
 
 const MobileNav = ({ active, onClick, CtaBtn }) => {
@@ -11,7 +13,11 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
       <section className={classnames("mobile-nav hide-md flex", { active })}>
         <header className="justify-space-between">
           <Link href="/">
-            <a>
+            <a
+              onClick={() => {
+                Mixpanel.track("mobile-menu-logo-click");
+              }}
+            >
               <img src={"/images/logo.svg"} alt="logo" className="logo" />
             </a>
           </Link>
@@ -24,15 +30,35 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
               <a className="mobile-link">Explore</a>
             </Link> */}
             <Link href="/about">
-              <a className="mobile-link">About Metechi</a>
+              <a
+                className="mobile-link"
+                onClick={() => {
+                  Mixpanel.track("mobile-menu-about-click");
+                }}
+              >
+                About Metechi
+              </a>
             </Link>
             <Link href="/contact">
-              <a className="mobile-link">Contact Us</a>
+              <a
+                className="mobile-link"
+                onClick={() => {
+                  Mixpanel.track("mobile-menu-contact-us-click");
+                }}
+              >
+                Contact Us
+              </a>
             </Link>
             {/* <Link href="/blog">
               <a className="mobile-link">Blog</a>
             </Link> */}
-            <a className="mobile-link" href="https://app.metechi.com/login">
+            <a
+              className="mobile-link"
+              href="https://app.metechi.com/login"
+              onClick={() => {
+                Mixpanel.track("mobile-menu-login-click");
+              }}
+            >
               Login
             </a>
           </div>
@@ -43,16 +69,25 @@ const MobileNav = ({ active, onClick, CtaBtn }) => {
                 target="_blank"
                 href="https://www.twitter.com/metechi"
                 className="social-icon icon-twitter"
+                onClick={() => {
+                  Mixpanel.track("mobile-menu-twitter-click");
+                }}
               />
               <a
                 target="_blank"
                 href="https://www.facebook.com/Metechi-1190578191118346"
                 className="social-icon icon-facebook"
+                onClick={() => {
+                  Mixpanel.track("mobile-menu-facebook-click");
+                }}
               />
               <a
                 target="_blank"
                 href="https://www.linkedin.com/company/metechi"
                 className="social-icon icon-linkedin"
+                onClick={() => {
+                  Mixpanel.track("mobile-menu-linkedin-click");
+                }}
               />
             </div>
           </footer>

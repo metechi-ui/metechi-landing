@@ -5,6 +5,8 @@ import nl2br from "react-nl2br";
 import fetch from "isomorphic-unfetch";
 
 import { breakpoints } from "../styles/theme";
+import { Mixpanel } from "../analytics/Mixpanel";
+
 import Nav from "../components/Nav";
 import AccessForm from "../components/AccessForm";
 import Button from "../components/Button";
@@ -26,7 +28,10 @@ const HeroBtn = () => {
       className="stagger-in third"
       primary
       label="Get Access"
-      onClick={() => dispatch({ type: "show" })}
+      onClick={() => {
+        dispatch({ type: "show" });
+        Mixpanel.track("hp-hero-cta-click");
+      }}
     />
   );
 };

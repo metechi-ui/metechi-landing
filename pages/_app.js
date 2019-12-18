@@ -6,6 +6,7 @@ import App from "next/app";
 import Page from "../layout/Page";
 import PageAnimation from "../components/PageAnimation";
 import Modal from "../components/Modal";
+import { Mixpanel } from "../analytics/Mixpanel";
 
 class MyApp extends App {
   constructor(props) {
@@ -16,6 +17,8 @@ class MyApp extends App {
   }
 
   componentDidMount() {
+    Mixpanel.init();
+
     Router.events.on("routeChangeStart", () => {
       this.setState({
         loading: true

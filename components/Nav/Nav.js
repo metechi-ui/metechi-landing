@@ -5,6 +5,8 @@ import classnames from "classnames";
 import { ModalContext } from "../../context/ModalContext";
 
 import { colors, breakpoints } from "../../styles/theme";
+import { Mixpanel } from "../../analytics/Mixpanel";
+
 import { useScroll } from "../../hooks/useScroll";
 import Button from "../../components/Button";
 import Hamburger from "./Hamburger";
@@ -20,6 +22,7 @@ const CtaBtn = ({ callback }) => {
       onClick={() => {
         dispatch({ type: "show" });
         callback && callback();
+        Mixpanel.track("navbar-cta-click");
       }}
     />
   );
@@ -32,7 +35,11 @@ const Menu = ({ light, sticky }) => {
     <>
       <div className={classnames("menu align-center", { sticky })}>
         <Link prefetch={false} href="/">
-          <a>
+          <a
+            onClick={() => {
+              Mixpanel.track("navbar-logo-click");
+            }}
+          >
             <img
               src={
                 !sticky && light ? "/images/logo-white.svg" : "/images/logo.svg"
@@ -51,6 +58,9 @@ const Menu = ({ light, sticky }) => {
               className={classnames("link", {
                 active: router.route === "/about"
               })}
+              onClick={() => {
+                Mixpanel.track("navbar-about-click");
+              }}
             >
               About Metechi
             </a>
@@ -60,6 +70,9 @@ const Menu = ({ light, sticky }) => {
               className={classnames("link", {
                 active: router.route === "/contact"
               })}
+              onClick={() => {
+                Mixpanel.track("navbar-contact-us-click");
+              }}
             >
               Contact Us
             </a>
@@ -135,7 +148,13 @@ const Nav = ({ light }) => {
     <>
       <nav className="main-menu max-container wide no-padding">
         <Menu light={light} />
-        <a className="hide-sm" href="https://app.metechi.com/login">
+        <a
+          className="hide-sm"
+          onClick={() => {
+            Mixpanel.track("navbar-login-click");
+          }}
+          href="https://app.metechi.com/login"
+        >
           <Button small secondary label="Login" />
         </a>
         <div className="hide-md">

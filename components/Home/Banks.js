@@ -3,6 +3,7 @@ import nl2br from "react-nl2br";
 
 import { ModalContext } from "../../context/ModalContext";
 import { colors, breakpoints } from "../../styles/theme";
+import { Mixpanel } from "../../analytics/Mixpanel";
 
 const Avatar = ({ author }) => {
   const { name, position } = author || {};
@@ -12,7 +13,10 @@ const Avatar = ({ author }) => {
     <>
       <div
         className="author align-center"
-        onClick={() => dispatch({ type: "show" })}
+        onClick={() => {
+          dispatch({ type: "show" });
+          Mixpanel.track("banks-author-cta-click");
+        }}
       >
         <img src="/images/HP/charles.jpg" alt="charles.jpg" />
         <div className="avatar-info">
