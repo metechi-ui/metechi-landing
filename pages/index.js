@@ -17,9 +17,9 @@ import Investors from "../components/Home/Investors";
 import Product from "../components/Home/Product";
 import { ModalContext } from "../context/ModalContext";
 
-const HeroWithNoSSR = dynamic(() => import("../components/Home/Hero"), {
-  ssr: false
-});
+// const HeroWithNoSSR = dynamic(() => import("../components/Home/Hero"), {
+//   ssr: false
+// });
 
 const HeroBtn = () => {
   const [, dispatch] = useContext(ModalContext);
@@ -52,9 +52,7 @@ const Home = ({ data = {} }) => {
         <HeroBtn label={nl2br(data.heroCta)} />
       </section>
 
-      <section className="hero-wrapper">
-        <HeroWithNoSSR />
-      </section>
+      <section className="hero-wrapper">{/* <HeroWithNoSSR /> */}</section>
 
       <div className="overflow-hidden">
         <Cards data={data} />
