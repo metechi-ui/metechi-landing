@@ -19,7 +19,8 @@ class MyApp extends App {
   componentDidMount() {
     Mixpanel.init();
 
-    Router.events.on("routeChangeStart", () => {
+    Router.events.on("routeChangeStart", url => {
+      Mixpanel.track("Navigation", { page: url });
       this.setState({
         loading: true
       });
