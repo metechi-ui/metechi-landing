@@ -150,9 +150,9 @@ const Home = ({ data = {} }) => {
 };
 
 Home.getInitialProps = async () => {
-  const res = await fetch("https://about.metechi.com/home.json", {
-    credentials: "include"
-  });
+  const res = await fetch(
+    "https://d1eibkscjecfjx.cloudfront.net/json/home.json"
+  );
   const data = await res.json();
   return { data };
 };
