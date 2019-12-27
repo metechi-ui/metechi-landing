@@ -9,12 +9,9 @@ import Modal from "../components/Modal";
 import { Mixpanel } from "../analytics/Mixpanel";
 
 class MyApp extends App {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: false
-    };
-  }
+  state = {
+    loading: false
+  };
 
   componentDidMount() {
     Mixpanel.init();
@@ -24,11 +21,13 @@ class MyApp extends App {
         loading: true
       });
     });
+
     Router.events.on("routeChangeComplete", () => {
       this.setState({
         loading: false
       });
     });
+
     Router.events.on("routeChangeError", () => {
       this.setState({
         loading: false

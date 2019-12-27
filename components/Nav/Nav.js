@@ -34,7 +34,7 @@ const Menu = ({ light, sticky }) => {
   return (
     <>
       <div className={classnames("menu align-center", { sticky })}>
-        <Link prefetch={false} href="/">
+        <Link href="/">
           <a
             onClick={() => {
               Mixpanel.track("Navbar Link Clicked", { page: "home" });
@@ -50,10 +50,10 @@ const Menu = ({ light, sticky }) => {
           </a>
         </Link>
         <div className="hide-sm">
-          {/* <Link prefetch={false} href="/explore">
+          {/* <Link href="/explore">
           <a className="link">Explore</a>
         </Link> */}
-          <Link prefetch={false} href="/about">
+          <Link href="/about">
             <a
               className={classnames("link", {
                 active: router.route === "/about"
@@ -65,7 +65,7 @@ const Menu = ({ light, sticky }) => {
               About Metechi
             </a>
           </Link>
-          <Link prefetch={false} href="/contact">
+          <Link href="/contact">
             <a
               className={classnames("link", {
                 active: router.route === "/contact"
@@ -79,9 +79,20 @@ const Menu = ({ light, sticky }) => {
               Contact Us
             </a>
           </Link>
-          {/* <Link prefetch={false} href="/blog">
-          <a className="link">Blog</a>
-        </Link> */}
+          <Link href="/blog">
+            <a
+              className={classnames("link", {
+                active: router.route === "/blog"
+              })}
+              onClick={() => {
+                Mixpanel.track("Navbar Link Clicked", {
+                  position: "blog"
+                });
+              }}
+            >
+              Blog
+            </a>
+          </Link>
         </div>
       </div>
       <style jsx>{`

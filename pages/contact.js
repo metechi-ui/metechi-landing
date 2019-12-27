@@ -1,8 +1,9 @@
 import React from "react";
 import Head from "next/head";
 
-import { colors, breakpoints } from "../styles/theme";
+import { breakpoints } from "../styles/theme";
 import Nav from "../components/Nav";
+import FollowUs from "../components/FollowUs";
 import ContactForm from "../components/Contact/Form";
 
 const Contact = () => {
@@ -10,7 +11,7 @@ const Contact = () => {
     <div>
       <Head>
         <title>Metechi - Contact</title>
-        <meta https-equiv="Content-type" CONTENT="text/html; charset=UTF-8" />
+        <meta https-equiv="Content-type" content="text/html; charset=UTF-8" />
       </Head>
       <Nav />
       <section>
@@ -30,28 +31,7 @@ const Contact = () => {
           </a>
         </div>
 
-        <div className="follow justify-center">
-          <div>
-            <h2>Follow Us</h2>
-            <div>
-              <a
-                target="_blank"
-                href="https://www.twitter.com/metechi"
-                className="social-icon icon-twitter"
-              />
-              <a
-                target="_blank"
-                href="https://www.facebook.com/Metechi-1190578191118346"
-                className="social-icon icon-facebook"
-              />
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/company/metechi"
-                className="social-icon icon-linkedin"
-              />
-            </div>
-          </div>
-        </div>
+        <FollowUs />
       </section>
 
       <style jsx>{`
@@ -87,41 +67,6 @@ const Contact = () => {
           opacity: 0.7;
         }
 
-        h2 {
-          text-align: center;
-          font-size: 4.2rem;
-          margin-bottom: 60px;
-        }
-
-        .social-icon {
-          font-size: 3rem;
-          color: ${colors.blueyGrey};
-          margin-right: 50px;
-          text-decoration: none;
-          transition: all 0.3s;
-          display: inline-block;
-        }
-        .social-icon:hover {
-          transform: translateY(-2px);
-        }
-        .social-icon.icon-facebook:hover {
-          color: ${colors.facebook};
-        }
-        .social-icon.icon-twitter:hover {
-          color: ${colors.twitter};
-        }
-        .social-icon.icon-linkedin:hover {
-          color: ${colors.linkedin};
-        }
-
-        .social-icon:last-child {
-          margin-right: 0;
-        }
-
-        .follow {
-          margin-bottom: 120px;
-        }
-
         @media (${breakpoints.md}) {
           h1 {
             font-size: 6.2rem;
@@ -134,17 +79,6 @@ const Contact = () => {
 
           .location {
             margin-bottom: 120px;
-          }
-          .follow {
-            margin-bottom: 180px;
-          }
-          h2 {
-            font-size: 5.2rem;
-            margin-bottom: 80px;
-          }
-          .social-icon {
-            font-size: 3.4rem;
-            margin-right: 65px;
           }
         }
       `}</style>
