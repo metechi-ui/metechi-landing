@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 
+import usePost from "../../hooks/usePost";
 import { colors } from "../../styles/theme";
 import Nav from "../../components/Nav";
 import FollowUs from "../../components/FollowUs";
@@ -10,39 +10,10 @@ import AccessForm from "../../components/AccessForm";
 import FormBackground from "../../components/AccessForm/Background";
 import Sidebar from "../../components/Blog/Sidebar";
 import { TagContainer, Tag } from "../../components/Blog/Tag";
+import More from "../../components/Blog/More";
 
-const Post = ({ post, tags }) => {
-  console.log(post);
-  const [cover, setCover] = useState("");
-  const [author, setAuthor] = useState({
-    name: "",
-    avatar_urls: []
-  });
-
-  useEffect(() => {
-    const getCover = async () => {
-      try {
-        const res = await fetch(
-          `http://18.218.129.154/wp-json/wp/v2/media/${post.featured_media}`
-        );
-        const data = await res.json();
-        setCover(data.guid.rendered);
-      } catch (error) {}
-    };
-
-    const getAuthor = async () => {
-      try {
-        const res = await fetch(
-          `http://18.218.129.154/wp-json/wp/v2/users/${post.author}`
-        );
-        const data = await res.json();
-        setAuthor(data);
-      } catch (error) {}
-    };
-
-    getCover();
-    getAuthor();
-  }, []);
+const Post = ({ post, posts, tags }) => {
+  const { cover, name, avatar_urls, date, postTags } = usePost({ post, tags });
 
   return (
     <div>
@@ -66,13 +37,15 @@ const Post = ({ post, tags }) => {
               <div className="align-center">
                 <figure className="avatar" />
                 <div>
-                  <p className="author-info">By Ofer Krichman</p>
-                  <p className="author-info">12/12/2019</p>
+                  <p className="author-info">By {name}</p>
+                  <p className="author-info">{date}</p>
                 </div>
               </div>
               <div className="tags">
                 <TagContainer>
-                  <Tag text="CRE" />
+                  {postTags.map(({ id, name }) => (
+                    <Tag key={id} text={name} />
+                  ))}
                 </TagContainer>
               </div>
               <div
@@ -86,6 +59,8 @@ const Post = ({ post, tags }) => {
           </div>
         </div>
       </section>
+
+      <More posts={posts} tags={tags} />
 
       <FollowUs />
 
@@ -161,7 +136,7 @@ const Post = ({ post, tags }) => {
         .avatar {
           width: 36px;
           height: 36px;
-          background-image: url("${author.avatar_urls[48]}");
+          background-image: url("${avatar_urls[48]}");
           background-repeat: no-repeat;
           background-position: center center;
           background-size: cover;
@@ -195,7 +170,11 @@ Post.getInitialProps = async ({ query }) => {
   const post = await res.json();
   const tagsReq = await fetch("http://18.218.129.154/wp-json/wp/v2/tags");
   const tags = await tagsReq.json();
-  return { post, tags };
+  const postsReq = await fetch(
+    "http://18.218.129.154/wp-json/wp/v2/posts?per_page=3"
+  );
+  const posts = await postsReq.json();
+  return { post, posts, tags };
 };
 
 export default Post;

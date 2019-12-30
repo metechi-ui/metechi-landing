@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 
 import { colors } from "../../styles/theme";
 
-const Pagination = ({ totalPages, onChange }) => {
+const Pagination = ({ totalPages, currentPage, onChange }) => {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-  const [activePage, setActivePage] = useState(1);
+  const [activePage, setActivePage] = useState(+currentPage || 1);
+
+  useEffect(() => {
+    if (currentPage) {
+      setActivePage(+currentPage);
+    }
+  }, [currentPage]);
+
   return (
     <>
       <div className="pagination">

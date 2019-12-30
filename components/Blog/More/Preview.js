@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
-import usePost from "../../hooks/usePost";
-import { colors } from "../../styles/theme";
-import { TagContainer, Tag } from "./Tag";
+import usePost from "../../../hooks/usePost";
+import { colors } from "../../../styles/theme";
+import { TagContainer, Tag } from "../Tag";
 
-const Post = ({ post, tags }) => {
+const Preview = ({ post, tags }) => {
   const { cover, name, avatar_urls, date, postTags } = usePost({ post, tags });
 
   return (
@@ -16,20 +16,16 @@ const Post = ({ post, tags }) => {
         </Link>
         <div className="content">
           <Link href={`/post/${post.id}`}>
-            <h2>{post.title.rendered}</h2>
+            <h3>{post.title.rendered}</h3>
           </Link>
-          <div className="flex">
-            <figure className="avatar" />
+          <div className="author">
+            <figure />
             <div>
-              <p className="avatar-info">By {name}</p>
-              <p className="avatar-info">{date}</p>
+              <p>By {name}</p>
+              <p>{date}</p>
             </div>
           </div>
-          <div
-            className="text"
-            dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-          />
-          <div className="align-center">
+          <div className="align-end">
             <TagContainer>
               {postTags.map(({ id, name }) => (
                 <Tag key={id} text={name} />
@@ -43,19 +39,15 @@ const Post = ({ post, tags }) => {
           </div>
         </div>
       </article>
-
       <style jsx>{`
         article {
+          flex: 1;
           border: solid 1px ${colors.lightGrey};
-          margin-bottom: 50px;
-        }
-
-        article:last-child {
-          margin-bottom: 0;
+          margin: 0 15px;
         }
 
         .cover {
-          height: 280px;
+          height: 200px;
           background-image: ${cover ? `url("${cover}")` : "none"};
           background-color: ${colors.lightGrey};
           background-repeat: no-repeat;
@@ -64,52 +56,52 @@ const Post = ({ post, tags }) => {
         }
 
         .content {
-          padding: 30px;
+          min-height: 275px;
+          display: flex;
+          flex-direction: column;
+          padding: 25px 20px;
         }
 
-        h2 {
-          font-size: 42px;
-          margin-bottom: 10px;
+        .author {
+          display: flex;
+          align-items: center;
+          margin-bottom: auto;
         }
 
-        .avatar {
+        h3 {
+          font-size: 30px;
+          margin-bottom: 22px;
+        }
+
+        figure {
           width: 36px;
           height: 36px;
+          background-color: ${colors.lightGrey};
           background-image: url("${avatar_urls[48]}");
           background-repeat: no-repeat;
           background-position: center center;
           background-size: cover;
           border-radius: 50%;
+          margin-right: 15px;
         }
 
-        .avatar-info {
-          margin-left: 15px;
+        p {
           font-size: 14px;
           color: ${colors.grey};
         }
 
-        .text {
-          font-size: 16px;
-          margin-top: 25px;
-          margin-bottom: 30px;
-        }
-
         .cta {
           min-width: 110px;
-          font-size: 18px;
+          font-size: 16px;
           font-weight: 500;
-          letter-spacing: -0.23px;
+          letter-spacing: -0.2px;
           color: ${colors.blue};
           margin-left: auto;
           text-decoration: none;
-        }
-
-        .blue {
-          color: ${colors.blue};
         }
       `}</style>
     </>
   );
 };
 
-export default Post;
+export default Preview;
