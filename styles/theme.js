@@ -15,6 +15,7 @@ const colors = {
   blueyGrey: "#afb7c4",
   iceBlue: "#f0f5ff",
   red: "#FF3A5C",
+  paleGrey: "#eceff5",
   linkedin: "#0077b5",
   facebook: "#3b5998",
   twitter: "#1da1f2"

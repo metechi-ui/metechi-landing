@@ -79,9 +79,20 @@ const Menu = ({ light, sticky }) => {
               Contact Us
             </a>
           </Link>
-          {/* <Link prefetch={false} href="/blog">
-          <a className="link">Blog</a>
-        </Link> */}
+          <Link href="/blog">
+            <a
+              className={classnames("link", {
+                active: router.route === "/blog"
+              })}
+              onClick={() => {
+                Mixpanel.track("Navbar Link Clicked", {
+                  position: "blog"
+                });
+              }}
+            >
+              Blog
+            </a>
+          </Link>
         </div>
       </div>
       <style jsx>{`
