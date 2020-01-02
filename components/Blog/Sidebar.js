@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 
-import { TagContainer, Tag } from "./Tag";
+import { usePostsList } from "../../context/PostsContext";
 import Searchbar from "../Searchbar";
+import { TagContainer, Tag } from "./Tag";
 
-const Sidebar = ({ tags }) => {
+const Sidebar = ({ tags, scrollToTop }) => {
+  const [search, setSearch] = useState("");
+  const { actions } = usePostsList();
+  const router = useRouter();
+
+  const handleSearch = async event => {
+    if (event.keyCode === 13) {
+      await actions.searchPosts(search);
+      scrollToTop();
+      const url = search ? `/blog?search=${search}&p=1` : `/blog?p=1`;
+      router.push(url, url, {
+        shallow: true
+      });
+    }
+  };
+
   return (
     <div>
-      <Searchbar placeholder="Search articles" />
+      <Searchbar
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+        onKeyDown={handleSearch}
+        placeholder="Search articles"
+        withIcon
+      />
       <div className="tags">
         <TagContainer>
           {tags.map(({ id, name, count }) => (

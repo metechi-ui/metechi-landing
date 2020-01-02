@@ -13,12 +13,15 @@ import { TagContainer, Tag } from "../../components/Blog/Tag";
 import More from "../../components/Blog/More";
 
 const Post = ({ post, posts, tags }) => {
-  const { cover, name, avatar_urls, date, postTags } = usePost({ post, tags });
+  const { cover, name, avatar_urls, date, postTags } = usePost({
+    post,
+    tags
+  });
 
   return (
     <div>
       <Head>
-        <title>Metechi - Post</title>
+        <title>Metechi - {post.title.rendered}</title>
         <meta https-equiv="Content-type" content="text/html; charset=UTF-8" />
       </Head>
 

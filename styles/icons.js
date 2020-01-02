@@ -30,12 +30,18 @@ const icons = css.global`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  .icon-search-icon:before {
+    content: "\e903";
+  }
+
   .icon-facebook:before {
     content: "\e900";
   }
+
   .icon-linkedin:before {
     content: "\e901";
   }
+
   .icon-twitter:before {
     content: "\e902";
   }

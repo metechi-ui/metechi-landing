@@ -2,21 +2,24 @@ import React from "react";
 
 import { colors } from "../../styles/theme";
 
-const Searchbar = ({ placeholder }) => {
+const Searchbar = ({ withIcon, ...props }) => {
   return (
     <>
       <div className="searchbar">
-        <input type="text" placeholder={placeholder} />
+        <input type="text" {...props} />
+        {withIcon && <i className="icon-search-icon" />}
       </div>
       <style jsx>{`
         .searchbar {
+          position: relative;
           height: 32px;
           display: flex;
           align-items: center;
           border-radius: 16px;
           border: solid 1px ${colors.lightGrey};
           background-color: ${colors.white};
-          padding: 0 16px;
+          padding-left: 16px;
+          padding-right: 36px;
         }
 
         .searchbar:focus-within {
@@ -31,6 +34,14 @@ const Searchbar = ({ placeholder }) => {
         }
 
         input::placeholder {
+          color: ${colors.grey};
+        }
+
+        i {
+          position: absolute;
+          top: calc(50% - 8px);
+          right: 8px;
+          font-size: 16px;
           color: ${colors.grey};
         }
       `}</style>

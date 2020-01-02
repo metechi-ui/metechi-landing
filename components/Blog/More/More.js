@@ -9,7 +9,7 @@ const More = ({ posts, tags }) => {
         <h1>More From Metechi</h1>
         <div className="flex">
           {posts.map(post => (
-            <PostPreview post={post} tags={tags} />
+            <PostPreview key={post.id} post={post} tags={tags} />
           ))}
         </div>
       </section>

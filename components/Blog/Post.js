@@ -61,6 +61,7 @@ const Post = ({ post, tags }) => {
           background-repeat: no-repeat;
           background-position: center center;
           background-size: cover;
+          cursor: pointer;
         }
 
         .content {
@@ -70,6 +71,7 @@ const Post = ({ post, tags }) => {
         h2 {
           font-size: 42px;
           margin-bottom: 10px;
+          cursor: pointer;
         }
 
         .avatar {

@@ -36,7 +36,7 @@ const usePost = ({ post, tags }) => {
   }, [post.date]);
 
   const postTags = useMemo(() => {
-    return post.tags.map(tagId => tags.find(({ id }) => tagId === id));
+    return (post.tags || []).map(tagId => tags.find(({ id }) => tagId === id));
   }, [post.tags]);
 
   useEffect(() => {

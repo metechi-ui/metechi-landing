@@ -53,6 +53,7 @@ const Preview = ({ post, tags }) => {
           background-repeat: no-repeat;
           background-position: center center;
           background-size: cover;
+          cursor: pointer;
         }
 
         .content {
@@ -71,6 +72,7 @@ const Preview = ({ post, tags }) => {
         h3 {
           font-size: 30px;
           margin-bottom: 22px;
+          cursor: pointer;
         }
 
         figure {
