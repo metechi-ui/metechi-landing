@@ -41,6 +41,7 @@ const Preview = ({ post, tags }) => {
       </article>
       <style jsx>{`
         article {
+          max-width: calc(33% - 30px);
           flex: 1;
           border: solid 1px ${colors.lightGrey};
           margin: 0 15px;

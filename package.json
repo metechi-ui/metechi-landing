@@ -21,7 +21,5 @@
     "react-use-gesture": "^6.0.14",
     "three": "^0.111.0"
   },
-  "devDependencies": {
-    "serverless-next.js": "^1.7.3"
-  }
+  "devDependencies": {}
 }

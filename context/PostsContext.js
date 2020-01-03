@@ -35,7 +35,7 @@ const PostsProvider = ({ posts, totalPages, children }) => {
 
   const fetchPostPerPage = async page => {
     const res = await fetch(
-      `http://18.218.129.154/wp-json/wp/v2/posts?per_page=5&page=${page}`
+      `${process.env.wpURL}/wp-json/wp/v2/posts?per_page=5&page=${page}`
     );
     const data = await res.json();
     dispatch({ type: "fetch", payload: data });
@@ -43,7 +43,7 @@ const PostsProvider = ({ posts, totalPages, children }) => {
 
   const searchPosts = async (keyword, page = 1) => {
     const res = await fetch(
-      `http://18.218.129.154/wp-json/wp/v2/posts?search=${keyword}&per_page=5&page=${page}`
+      `${process.env.wpURL}/wp-json/wp/v2/posts?search=${keyword}&per_page=5&page=${page}`
     );
     const posts = await res.json();
     const totalPages = res.headers.get("x-wp-totalpages");

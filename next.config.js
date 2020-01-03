@@ -1,3 +1,5 @@
 module.exports = {
-  target: "serverless"
+  env: {
+    wpURL: "https://wp-dev.metechi.com"
+  }
 };

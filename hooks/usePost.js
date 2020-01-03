@@ -43,7 +43,7 @@ const usePost = ({ post, tags }) => {
     const getCover = async () => {
       try {
         const res = await fetch(
-          `http://18.218.129.154/wp-json/wp/v2/media/${post.featured_media}`
+          `${process.env.wpURL}/wp-json/wp/v2/media/${post.featured_media}`
         );
         const data = await res.json();
         dispatch({ type: "SET_COVER", payload: data.guid.rendered });
@@ -53,7 +53,7 @@ const usePost = ({ post, tags }) => {
     const getAuthor = async () => {
       try {
         const res = await fetch(
-          `http://18.218.129.154/wp-json/wp/v2/users/${post.author}`
+          `${process.env.wpURL}/wp-json/wp/v2/users/${post.author}`
         );
         const data = await res.json();
         dispatch({ type: "SET_AUTHOR", payload: data });

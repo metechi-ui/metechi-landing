@@ -84,11 +84,11 @@ const Blog = ({ posts, tags, totalPages }) => {
 Blog.getInitialProps = async ({ query }) => {
   const { p } = query;
   const postURL = p
-    ? `http://18.218.129.154/wp-json/wp/v2/posts?per_page=5&page=${p}`
-    : "http://18.218.129.154/wp-json/wp/v2/posts?per_page=5";
+    ? `${process.env.wpURL}/wp-json/wp/v2/posts?per_page=5&page=${p}`
+    : `${process.env.wpURL}/wp-json/wp/v2/posts?per_page=5`;
   const postsReq = await fetch(postURL);
   const posts = await postsReq.json();
-  const tagsReq = await fetch("http://18.218.129.154/wp-json/wp/v2/tags");
+  const tagsReq = await fetch(`${process.env.wpURL}/wp-json/wp/v2/tags`);
   const tags = await tagsReq.json();
   return { posts, tags, totalPages: postsReq.headers.get("x-wp-totalpages") };
 };

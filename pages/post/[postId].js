@@ -167,14 +167,12 @@ const Post = ({ post, posts, tags }) => {
 
 Post.getInitialProps = async ({ query }) => {
   const { postId } = query;
-  const res = await fetch(
-    `http://18.218.129.154/wp-json/wp/v2/posts/${postId}`
-  );
+  const res = await fetch(`${process.env.wpURL}/wp-json/wp/v2/posts/${postId}`);
   const post = await res.json();
-  const tagsReq = await fetch("http://18.218.129.154/wp-json/wp/v2/tags");
+  const tagsReq = await fetch(`${process.env.wpURL}/wp-json/wp/v2/tags`);
   const tags = await tagsReq.json();
   const postsReq = await fetch(
-    "http://18.218.129.154/wp-json/wp/v2/posts?per_page=3"
+    `${process.env.wpURL}/wp-json/wp/v2/posts?per_page=3`
   );
   const posts = await postsReq.json();
   return { post, posts, tags };
