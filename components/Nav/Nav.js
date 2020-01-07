@@ -18,7 +18,7 @@ const CtaBtn = ({ callback }) => {
     <Button
       small
       primary
-      label="Get Access"
+      label="Access Marketplace"
       onClick={() => {
         dispatch({ type: "show" });
         callback && callback();

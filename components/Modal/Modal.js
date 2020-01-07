@@ -25,7 +25,7 @@ const Modal = () => {
                 className="max-container wide no-padding apear-from-top"
                 transform={{ transform: props.transform }}
               >
-                <AccessForm />
+                <AccessForm inModal />
                 <div
                   className="close"
                   onClick={() => dispatch({ type: "hide" })}
@@ -106,28 +106,6 @@ const Modal = () => {
         body {
           height: ${show ? "100%" : "auto"};
           overflow-y: ${show ? "hidden" : "auto"};
-        }
-        .modal .access-form {
-          padding-top: 12vh;
-          padding-bottom: 20vh;
-        }
-        .modal .access-form h2 {
-          margin-bottom: 6vh;
-        }
-
-        @media (${breakpoints.downTy}) {
-          .modal .access-form {
-            padding-bottom: 30vh;
-          }
-        }
-        @media (${breakpoints.sm}) {
-          .modal .access-form {
-            padding-top: 12vh;
-            padding-bottom: 20vh;
-          }
-          .modal .access-form h2 {
-            margin-bottom: 6vh;
-          }
         }
       `}</style>
     </>

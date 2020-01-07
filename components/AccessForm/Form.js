@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import classnames from "classnames";
 
 import { breakpoints } from "../../styles/theme";
 import Button from "../../components/Button";
 import Field from "../../components/Field";
 
-const Form = () => {
+const Form = ({ inModal }) => {
   const [queries, setQueries] = useState({});
   const router = useRouter();
 
@@ -15,8 +16,19 @@ const Form = () => {
 
   return (
     <>
-      <section className="access-form max-container">
-        <h2 className="stagger-in second">Access CRE Loans</h2>
+      <section
+        className={classnames("access-form max-container", {
+          "in-modal": inModal
+        })}
+      >
+        <h2 className="stagger-in second">
+          {inModal ? "Welcome to Metechi!" : "Access Marketplace"}
+        </h2>
+        {/* {inModal && ( */}
+        <p className="stagger-in second">
+          Please Share Your Contact Details. We'll Be In Touch Shortly.
+        </p>
+        {/* )} */}
 
         <form
           className="stagger-in third"
@@ -47,7 +59,7 @@ const Form = () => {
               type="hidden"
               id="Campaign_ID"
               name="Campaign_ID"
-              value={queries.utm_medium}
+              value={queries.utm_campaign}
             />
           )}
           <input
@@ -97,11 +109,24 @@ const Form = () => {
           padding-top: 80px;
           padding-bottom: 90px;
         }
+        section.in-modal {
+          padding-top: 12vh;
+          padding-bottom: 20vh;
+        }
 
         h2 {
           font-size: 4.2rem;
           text-align: center;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 1.6rem;
+          text-align: center;
           margin-bottom: 50px;
+        }
+
+        section.in-modal p {
+          margin-bottom: 6vh;
         }
 
         @media (${breakpoints.sm}) {
@@ -116,16 +141,30 @@ const Form = () => {
           section {
             padding-bottom: 150px;
           }
+          section.in-modal {
+            padding-bottom: 30vh;
+          }
         }
 
         @media (${breakpoints.md}) {
           h2 {
             font-size: 5.2rem;
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 1.7rem;
             margin-bottom: 80px;
           }
 
           section {
             padding-bottom: 120px;
+          }
+        }
+
+        @media (${breakpoints.sm}) {
+          section.in-modal {
+            padding-top: 12vh;
+            padding-bottom: 20vh;
           }
         }
       `}</style>

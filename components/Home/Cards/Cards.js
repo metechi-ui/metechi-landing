@@ -96,7 +96,7 @@ const Cards = ({ data }) => {
         }
 
         article {
-          max-width: 520px;
+          max-width: 480px;
           margin-left: 25px;
           margin-right: 25px;
           flex: 1;
@@ -110,6 +110,7 @@ const Cards = ({ data }) => {
         p {
           font-size: 1.8rem;
           color: ${colors.white};
+          margin-bottom: 20px;
         }
 
         .cards {

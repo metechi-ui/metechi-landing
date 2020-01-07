@@ -35,7 +35,7 @@ const Form = ({ className }) => {
             type="hidden"
             id="Campaign_ID"
             name="Campaign_ID"
-            value={queries.utm_medium}
+            value={queries.utm_campaign}
           />
         )}
         {/* medium */}

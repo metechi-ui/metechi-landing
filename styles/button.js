@@ -13,6 +13,7 @@ const button = css.global`
     overflow: hidden;
     border: none;
     padding: 15px 40px;
+    border-radius: 3px;
   }
   .button:before {
     content: "";

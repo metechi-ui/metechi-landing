@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 import resetStyles from "../styles/reset";
 import typographyStyles from "../styles/typography";
@@ -93,6 +94,24 @@ const Page = ({ children }) => {
 
   return (
     <div className="page">
+      <Head>
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=GTM-MTHTKKL`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GTM-MTHTKKL');
+        `
+          }}
+        />
+      </Head>
+
       {children}
       <Footer />
 

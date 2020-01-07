@@ -27,7 +27,7 @@ const HeroBtn = () => {
     <Button
       className="stagger-in third"
       primary
-      label="Get Access"
+      label="Access Marketplace"
       onClick={() => {
         dispatch({ type: "show" });
         Mixpanel.track("CTA Clicked", { position: "hp-herp" });
@@ -150,7 +150,7 @@ const Home = ({ data = {} }) => {
 };
 
 Home.getInitialProps = async () => {
-  const res = await fetch("https://about.metechi.com/home.json", {
+  const res = await fetch("http://localhost:3000/json/home.json", {
     credentials: "include"
   });
   const data = await res.json();
