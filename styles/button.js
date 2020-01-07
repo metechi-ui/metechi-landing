@@ -1,6 +1,6 @@
 import css from "styled-jsx/css";
 
-import { colors } from "./theme";
+import { colors, breakpoints } from "./theme";
 
 const button = css.global`
   .button {
@@ -67,10 +67,10 @@ const button = css.global`
   }
 
   .button.small {
-    padding: 12px 30px;
+    padding: 10px 15px;
   }
   .button.small .label {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .button.primary {
@@ -94,6 +94,15 @@ const button = css.global`
   }
   .button.secondary .label:after {
     color: ${colors.darkGrey};
+  }
+
+  @media (${breakpoints.md}) {
+    .button.small {
+      padding: 12px 30px;
+    }
+    .button.small .label {
+      font-size: 1.5rem;
+    }
   }
 `;
 
