@@ -1,5 +1,5 @@
 import React, { useRef, Suspense } from "react";
-import { Canvas, useThree, useFrame, useRender } from "react-three-fiber";
+import { Canvas, useThree, useFrame } from "react-three-fiber";
 import { useLoader } from "react-three-fiber";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 
@@ -285,7 +285,7 @@ function Building({ geometry, position, rotation, timing, id }) {
   const mesh = useRef();
   let scale = 0;
 
-  useRender(() => {
+  useFrame(() => {
     const b = buildingsScaleState.find(a => a.id === id);
     if (b) {
       scale = b.scale;
