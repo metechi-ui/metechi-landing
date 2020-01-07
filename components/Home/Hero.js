@@ -65,7 +65,7 @@ function Group({ children }) {
     group.current.rotation.y = group.current.rotation.y += 0.005;
   });
 
-  return <group ref={group}>{children}</group>;
+  return <a.group ref={group}>{children}</a.group>;
 }
 
 function Globe() {
