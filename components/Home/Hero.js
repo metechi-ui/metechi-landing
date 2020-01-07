@@ -1,5 +1,5 @@
 import React, { useRef, Suspense } from "react";
-import { Canvas, useThree, useRender } from "react-three-fiber";
+import { Canvas, useThree, useFrame, useRender } from "react-three-fiber";
 import { useLoader } from "react-three-fiber";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 
@@ -61,7 +61,7 @@ function MousePad({ children }) {
 function Group({ children }) {
   const group = useRef();
 
-  useRender(() => {
+  useFrame(() => {
     group.current.rotation.y = group.current.rotation.y += 0.005;
   });
 
@@ -85,7 +85,7 @@ function Clouds() {
   const group1 = useRef();
   const group2 = useRef();
 
-  useRender(() => {
+  useFrame(() => {
     group1.current.rotation.y = group1.current.rotation.y += 0.005;
     group2.current.rotation.y = group2.current.rotation.y += 0.003;
     group2.current.rotation.x = group2.current.rotation.x += 0.001;

@@ -96,7 +96,7 @@ const Page = ({ children }) => {
     <div className="page">
       <Head>
         {/* Global Site Tag (gtag.js) - Google Analytics */}
-        <script
+        {/* <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=GTM-MTHTKKL`}
         />
@@ -109,7 +109,7 @@ const Page = ({ children }) => {
           gtag('config', 'GTM-MTHTKKL');
         `
           }}
-        />
+        /> */}
       </Head>
 
       {children}
