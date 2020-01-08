@@ -9,13 +9,20 @@ const Card = ({ className, deals, delay }) => {
   const [index, set] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(
-      () => set(state => (state + 1) % 2),
-      4000 + delay
-    );
+    let last = 0;
+    let req;
+
+    const nextCard = now => {
+      if (!last || now - last >= 4000 + delay) {
+        last = now;
+        set(state => (state + 1) % 2);
+      }
+      req = requestAnimationFrame(nextCard);
+    };
+    nextCard();
 
     return () => {
-      clearInterval(interval);
+      cancelAnimationFrame(req);
     };
   }, []);
 

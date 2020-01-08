@@ -1,4 +1,4 @@
-import React, { useRef, Suspense } from "react";
+import React, { useRef, Suspense, useEffect, useState } from "react";
 import { Canvas, useThree, useFrame } from "react-three-fiber";
 import { useLoader } from "react-three-fiber";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
@@ -51,6 +51,7 @@ function MousePad({ children }) {
       set({ rotation: [y / aspect / 10, x / aspect / 10, 0] }),
     { pointerEvents: true }
   );
+
   return (
     <a.group {...spring} {...bindMove()}>
       {children}
@@ -279,34 +280,36 @@ function Buildings() {
   );
 }
 
-let buildingsScaleState = [];
-
-function Building({ geometry, position, rotation, timing, id }) {
+function Building({ geometry, position, rotation, timing }) {
   const mesh = useRef();
-  let scale = 0;
+  const [scale, setScale] = useState(0);
 
   useFrame(() => {
-    const b = buildingsScaleState.find(a => a.id === id);
-    if (b) {
-      scale = b.scale;
-    } else {
-      buildingsScaleState.push({ id, scale: 0 });
-    }
-
-    scale += 0.04 * timing;
-    mesh.current.scale.set(1, Math.sin(scale), 1);
-
-    b
-      ? (b.scale = scale)
-      : (buildingsScaleState.find(a => a.id === id).scale = scale);
+    setScale(scale + 0.04 * timing);
   });
+
+  // useEffect(() => {
+  //   let scale = 0;
+  //   let req;
+
+  //   const animate = () => {
+  //     scale += 0.04 * timing;
+  //     mesh.current.scale.set(1, Math.sin(scale), 1);
+  //     req = requestAnimationFrame(animate);
+  //   };
+  //   animate();
+
+  //   return () => {
+  //     cancelAnimationFrame(req);
+  //   };
+  // }, []);
 
   return (
     <mesh
       ref={mesh}
       position={position}
       rotation={rotation}
-      scale={[0, 0, 0]}
+      scale={[1, Math.sin(scale), 1]}
       geometry={geometry}
     >
       <a.meshPhongMaterial {...fadeIn()} attach="material" {...goldMaterial} />
