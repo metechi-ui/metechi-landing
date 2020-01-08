@@ -273,6 +273,7 @@ function Building({ geometry, position, rotation, timing }) {
   const [scale, setScale] = useState(0);
 
   useFrame(() => {
+    console.log(scale);
     setScale(scale + 0.04 * timing);
   });
 
