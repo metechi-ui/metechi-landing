@@ -66,7 +66,7 @@ function Group({ children }) {
     group.current.rotation.y = group.current.rotation.y += 0.005;
   });
 
-  return <a.group ref={group}>{children}</a.group>;
+  return <group ref={group}>{children}</group>;
 }
 
 function Globe() {
@@ -176,7 +176,6 @@ function Buildings() {
     <a.group>
       <Building
         key="Manchuria"
-        id="Manchuria"
         geometry={shape.poniter}
         position={[0, 3.5, 1]}
         rotation={[0.2, -0.2, -0.1]}
@@ -184,7 +183,6 @@ function Buildings() {
       />
       <Building
         key="Russia"
-        id="Russia"
         geometry={shape.square}
         position={[-2, 2.9, 1]}
         rotation={[0, 0.5, 0.5]}
@@ -193,7 +191,6 @@ function Buildings() {
 
       <Building
         key="US-west"
-        id="US-west"
         geometry={shape.accordion}
         position={[2.5, 2, -1.3]}
         rotation={[-0.2, 0.2, -0.9]}
@@ -201,7 +198,6 @@ function Buildings() {
       />
       <Building
         key="US-east"
-        id="US-east"
         geometry={shape.poniter}
         position={[1.2, 2.4, -2.4]}
         rotation={[-0.3, 0.8, -0.4]}
@@ -210,7 +206,6 @@ function Buildings() {
 
       <Building
         key="US-center"
-        id="US-center"
         geometry={shape.diagonal}
         position={[2, 2.35, -2]}
         rotation={[0, 0.85, -0.7]}
@@ -218,7 +213,6 @@ function Buildings() {
       />
       <Building
         key="Brazil"
-        id="Brazil"
         geometry={shape.antena}
         position={[1.6, -0.3, -3.2]}
         rotation={[0, 1.2, -1.6]}
@@ -227,7 +221,6 @@ function Buildings() {
 
       <Building
         key="India"
-        id="India"
         geometry={shape.diagonal}
         position={[-3, 1.8, 1]}
         rotation={[0, 0.2, 1]}
@@ -235,7 +228,6 @@ function Buildings() {
       />
       <Building
         key="Middle-East"
-        id="Middle-East"
         geometry={shape.antena}
         position={[-3, 1.8, -1]}
         rotation={[0, -0.3, 0.95]}
@@ -244,7 +236,6 @@ function Buildings() {
 
       <Building
         key="Africa-center"
-        id="Africa-center"
         geometry={shape.poniter}
         position={[-3, 0.5, -2]}
         rotation={[0, -0.6, 1.4]}
@@ -252,7 +243,6 @@ function Buildings() {
       />
       <Building
         key="Africa-east"
-        id="Africa-east"
         geometry={shape.square}
         position={[-1.8, 0.8, -3]}
         rotation={[0, -1, 1.3]}
@@ -261,7 +251,6 @@ function Buildings() {
 
       <Building
         key="EU"
-        id="EU"
         geometry={shape.plain}
         position={[-2, 2.4, -1.8]}
         rotation={[0, -0.8, 0.95]}
@@ -270,7 +259,6 @@ function Buildings() {
 
       <Building
         key="Australia"
-        id="Australia"
         geometry={shape.accordion}
         position={[0, -1.2, 3.2]}
         rotation={[1.8, 0, 0]}
@@ -287,22 +275,6 @@ function Building({ geometry, position, rotation, timing }) {
   useFrame(() => {
     setScale(scale + 0.04 * timing);
   });
-
-  // useEffect(() => {
-  //   let scale = 0;
-  //   let req;
-
-  //   const animate = () => {
-  //     scale += 0.04 * timing;
-  //     mesh.current.scale.set(1, Math.sin(scale), 1);
-  //     req = requestAnimationFrame(animate);
-  //   };
-  //   animate();
-
-  //   return () => {
-  //     cancelAnimationFrame(req);
-  //   };
-  // }, []);
 
   return (
     <mesh
